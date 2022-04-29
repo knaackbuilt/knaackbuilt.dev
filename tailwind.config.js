@@ -4,7 +4,11 @@ module.exports = {
    '_site/**/*.html'  
  ],
   theme: {
+    fontFamily: {
+      sans: ['espysans', 'sans-serif']
+     },
     extend: {},
   },
+  
   plugins: [],
 }
