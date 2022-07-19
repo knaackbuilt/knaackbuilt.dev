@@ -1,0 +1,10 @@
+a:focus {
+    outline: 7px solid #777;
+    outline-offset: 1px;
+    outline-style:groove;
+}
+a:hover {
+    outline: 7px solid #777;
+    outline-offset: 1px;
+    outline-style:groove;
+}
