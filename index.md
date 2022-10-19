@@ -4,21 +4,36 @@ title: Knaackbuilt.dev
 ---
  {% from './_includes/_components.njk' import topic  %}
 <h1 class="text-3xl font-bold py-4"><a href="/"> {{title}}</a></h1>
-<p class="my-4 text-sm"> I'm building this site in the open so it's gonna be a bit of a mess for a while </p>
+<p class="my-4 text-sm"> I like building simple things that real humans can use. </p>
 {{ topic({
-    title:"Topics I'm interested in",
+    title:"The internets",
     topics:[
         {
-            title:"First Topic",
-            text:"A description"
+            title:"HTML",
+            text:"html is great"
         },
         {
-            title:"Second Topic",
-            text:"Something very interesting!"
+            title:"Accessibility",
+            text:"so much debate here"
         },
         {
-            title:"Third Topic",
-            text:"One more for the road"
+            title:"Front-end Web Development",
+            text:"thoughts on this in general"
+        }
+    ]
+
+})}}
+
+{{ topic({
+    title:"Just the facts",
+    topics:[
+        {
+            title:"Resume",
+            text:"default way to show I technically 'work'"
+        },
+        {
+            title:"Things I've contributed to",
+            text:"list of projects you can disregard"
         }
     ]
 
