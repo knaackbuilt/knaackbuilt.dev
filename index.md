@@ -2,9 +2,9 @@
 layout: layout.njk
 title: Knaackbuilt.dev
 ---
- {% from './_includes/_components.njk' import topic  %}
+ {% from './_includes/_components.njk' import topic, randomizer  %}
 <h1 class="text-3xl font-bold py-4"><a href="/"> {{title}}</a></h1>
-<p class="my-4 text-sm"> I like building simple things that real humans can use. </p>
+{{ randomizer({})}}
 {{ topic({
     title:"The internets",
     topics:[

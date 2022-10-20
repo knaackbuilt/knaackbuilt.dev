@@ -17,7 +17,25 @@
     
     <main class=" min-h-screen w-full lg:w-1/2 " id="main-site-content-for-skiplink">
     <h1 class="text-3xl font-bold py-4"><a href="/"> Knaackbuilt.dev</a></h1>
-<p class="my-4 text-sm"> I like building simple things that real humans can use. </p>
+<div id="quote"></div>
+<script>
+    (function() {
+      var quotes = [
+        {
+          text: "I like building simple things that real humans can use."
+        },
+        {
+          text: "Websites aren't that hard. Stop making them hard."
+        },
+        {
+          text: "Managers should still be developers."
+        }
+      ];
+      var quote = quotes[Math.floor(Math.random() * quotes.length)];
+      document.getElementById("quote").innerHTML =
+        '<p>' + quote.text + '</p>';
+    })();
+  </script>
 <section class="flex flex-col w-full mt-8">
     <h2 class="uppercase font-bold"> The internets</h2>
 <a href="#" class="hover:bg-slate-600 focus:bg-slate-600 bg-slate-300 hover:text-white focus:text-white my-4">

@@ -1,0 +1,19 @@
+<div id="quote"></div>
+<script>
+    (function() {
+      var quotes = [
+        {
+          text: "I like building simple things that real humans can use."
+        },
+        {
+          text: "Websites aren't that hard. Stop making them hard."
+        },
+        {
+          text: "Managers should still be developers."
+        }
+      ];
+      var quote = quotes[Math.floor(Math.random() * quotes.length)];
+      document.getElementById("quote").innerHTML =
+        '<p>' + quote.text + '</p>';
+    })();
+  </script>
