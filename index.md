@@ -2,9 +2,7 @@
 layout: layout.njk
 title: Knaackbuilt.dev
 ---
- {% from './_includes/_components.njk' import topic, randomizer  %}
-<h1 class="text-3xl font-bold py-4 font-espy"><a href="/"> {{title}}</a></h1>
-{{ randomizer({})}}
+{% from './_includes/_components.njk' import topic, taglist  %}
 {{ topic({
     title:"I like this stuff",
     topics:[
@@ -34,7 +32,7 @@ title: Knaackbuilt.dev
         },
         {
             title:"Things I've contributed to",
-            text:"list of projects you can disregard",
+            text:"list of projects",
             link: "/contrib"
         }
     ]

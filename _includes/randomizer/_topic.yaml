@@ -1,13 +1,3 @@
 params:
-- name: items
-  type: array
-  required: true
-  params:
-  - name: link
-    type: boolean
-    required: false
-  - name: text
-    type: string
-    required: false
-  
+
 

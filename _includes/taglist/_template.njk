@@ -1,0 +1,9 @@
+<section class="">
+<ul class="">
+{% for tag in params.tags %}
+<li class="my-3  flex align-center justify-between"><a href="{{tag.link}}" class="">{{tag.title}}</a>
+<div>{% for category in tag.categories %}<span class="ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap {{category.text}}" x-ref="{{category.text}}">{{category.text}}</span>{% endfor %}</div>
+</li>
+{% endfor %}
+</ul>
+</section>

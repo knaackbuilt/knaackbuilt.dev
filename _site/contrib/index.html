@@ -10,14 +10,14 @@
 <link href="/css/everything-else.css" rel="stylesheet">
 
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <title>Knaackbuilt.dev</title>
+    <title>Projects and How I Contributed</title>
   </head>
   <body class="m-8 flex flex-col items-center">
   <a href="#main-site-content-for-skiplink" class="sr-only focus:not-sr-only text-blue-700 underline">Skip to Main Content</a>
     
-    <main class=" min-h-screen w-full lg:w-1/2 " id="main-site-content-for-skiplink">
-    <h1 class="text-3xl font-bold py-4"><a href="/"> Knaackbuilt.dev</a></h1>
-<div id="quote" class="mb-4 border-b-2 border-gray-600"></div>
+    <main class="min-h-screen w-full lg:w-2/3 " id="main-site-content-for-skiplink">
+    <h1 class="text-3xl font-bold py-4"><a href="/">Knaackbuilt.dev</a></h1>
+    <div id="quote" class="mb-4 border-b-2 border-gray-600"></div>
 <script>
     (function() {
       var quotes = [
@@ -29,6 +29,12 @@
         },
         {
           text: "Managers should still be developers."
+        },
+        {
+          text: "Accessible design is usable design."
+        },
+        {
+          text: "Do the best work for the greatest good."
         }
       ];
       var quote = quotes[Math.floor(Math.random() * quotes.length)];
@@ -36,11 +42,36 @@
         '<p class="font-espy">' + quote.text + '</p>';
     })();
   </script>
-<ul>
-<li class="my-2"><a href="https://ny.gov">The Official Website of the State of New York - ny.gov</a></li>
-<li class="my-2"><a href="https://ny.gov">The Official Website of the Governor State of New York - governor.ny.gov</a></li>
+    <h2 class=" uppercase font-bold py-2">Projects and How I Contributed:</h2>
+<div class="" x-data="">
+<label for="frontend" class="font-espy text-sm">Front-end Web Development</label>
+<input type="checkbox" id="frontend" class="border border-black rounded" @click="findfront()">
+<script>
+    function findfront(){
+        const front = document.querySelectorAll('.frontend');
+            for (let i = 0; i < front.length; i++) {
+                        front[i].classList.toggle('bg-yellow-500')
+                    }
+    } 
+</script>
+<section class="">
+<ul class="">
+<li class="my-3  flex align-center justify-between"><a href="https://ny.gov" class="">The Official Website of the State of New York - ny.gov</a>
+<div><span class="ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap frontend" x-ref="frontend">frontend</span><span class="ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap product" x-ref="product">product</span></div>
+</li>
+<li class="my-3  flex align-center justify-between"><a href="https://governor.ny.gov" class="">The Official Website of the Governor State of New York - governor.ny.gov</a>
+<div><span class="ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap frontend" x-ref="frontend">frontend</span><span class="ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap product" x-ref="product">product</span></div>
+</li>
+<li class="my-3  flex align-center justify-between"><a href="https://ogs.ny.gov" class="">Office of General Services - ogs.ny.gov</a>
+<div><span class="ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap content" x-ref="content">content</span><span class="ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap product" x-ref="product">product</span></div>
+</li>
+<li class="my-3  flex align-center justify-between"><a href="https://nysds.dev" class="">NYS Digital Services Utilities - nysds.dev</a>
+<div><span class="ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap fullstack" x-ref="fullstack">fullstack</span></div>
+</li>
 </ul>
+</section>
+</div>
     </main>
-    
+   
   </body>
 </html>

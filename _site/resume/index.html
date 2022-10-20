@@ -15,7 +15,33 @@
   <body class="m-8 flex flex-col items-center">
   <a href="#main-site-content-for-skiplink" class="sr-only focus:not-sr-only text-blue-700 underline">Skip to Main Content</a>
     
-    <main class=" min-h-screen w-full lg:w-1/2 " id="main-site-content-for-skiplink">
+    <main class="min-h-screen w-full lg:w-2/3 " id="main-site-content-for-skiplink">
+    <h1 class="text-3xl font-bold py-4"><a href="/">Knaackbuilt.dev</a></h1>
+    <div id="quote" class="mb-4 border-b-2 border-gray-600"></div>
+<script>
+    (function() {
+      var quotes = [
+        {
+          text: "I like building simple things that real humans can use."
+        },
+        {
+          text: "Websites aren't that hard. Stop making them hard."
+        },
+        {
+          text: "Managers should still be developers."
+        },
+        {
+          text: "Accessible design is usable design."
+        },
+        {
+          text: "Do the best work for the greatest good."
+        }
+      ];
+      var quote = quotes[Math.floor(Math.random() * quotes.length)];
+      document.getElementById("quote").innerHTML =
+        '<p class="font-espy">' + quote.text + '</p>';
+    })();
+  </script>
     <h1 class="text-3xl font-bold py-4"><a href="/"> Knaackbuilt.dev</a></h1>
 <div id="quote" class="mb-4 border-b-2 border-gray-600"></div>
 <script>
@@ -29,6 +55,12 @@
         },
         {
           text: "Managers should still be developers."
+        },
+        {
+          text: "Accessible design is usable design."
+        },
+        {
+          text: "Do the best work for the greatest good."
         }
       ];
       var quote = quotes[Math.floor(Math.random() * quotes.length)];
@@ -38,6 +70,6 @@
   </script>
 <p> Hey nothing here yet! </p>
     </main>
-    
+   
   </body>
 </html>

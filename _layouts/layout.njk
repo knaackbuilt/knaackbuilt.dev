@@ -11,11 +11,12 @@
   </head>
   <body class="m-8 flex flex-col items-center">
   <a href="#main-site-content-for-skiplink" class="sr-only focus:not-sr-only text-blue-700 underline">Skip to Main Content</a>
-    {# {% from '../_includes/_components.njk' import nav,footer  %}
-     {% include 'nav-data.md' %} #}
-    <main class=" min-h-screen w-full lg:w-1/2 " id="main-site-content-for-skiplink">
+    {% from '../_includes/_components.njk' import randomizer  %}
+    <main class="min-h-screen w-full lg:w-2/3 " id="main-site-content-for-skiplink">
+    <h1 class="text-3xl font-bold py-4"><a href="/">Knaackbuilt.dev</a></h1>
+    {{ randomizer({})}}
     {{ content | safe }}
     </main>
-    {# {% include 'footer-data.md' %} #}
+   
   </body>
 </html>
