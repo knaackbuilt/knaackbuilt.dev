@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="a personal website where I can never get tired of html">
+    <meta name="generator" content="11ty/eleventy">
+    <link href="/css/tailwind.css" rel="stylesheet">
+<link href="/css/fonts.css" rel="stylesheet">
+<link href="/css/everything-else.css" rel="stylesheet">
+
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <title>Knaackbuilt.dev</title>
+  </head>
+  <body class="m-8 flex flex-col items-center">
+  <a href="#main-site-content-for-skiplink" class="sr-only focus:not-sr-only text-blue-700 underline">Skip to Main Content</a>
+    
+    <main class=" min-h-screen w-full lg:w-1/2 " id="main-site-content-for-skiplink">
+    <h1 class="text-3xl font-bold py-4"><a href="/"> Knaackbuilt.dev</a></h1>
+<div id="quote" class="mb-4 border-b-2 border-gray-600"></div>
+<script>
+    (function() {
+      var quotes = [
+        {
+          text: "I like building simple things that real humans can use."
+        },
+        {
+          text: "Websites aren't that hard. Stop making them hard."
+        },
+        {
+          text: "Managers should still be developers."
+        }
+      ];
+      var quote = quotes[Math.floor(Math.random() * quotes.length)];
+      document.getElementById("quote").innerHTML =
+        '<p>' + quote.text + '</p>';
+    })();
+  </script>
+<ul>
+<li class="my-2"><a href="https://ny.gov">The Official Website of the State of New York - ny.gov</a></li>
+<li class="my-2"><a href="https://ny.gov">The Official Website of the Governor State of New York - governor.ny.gov</a></li>
+</ul>
+    </main>
+    
+  </body>
+</html>

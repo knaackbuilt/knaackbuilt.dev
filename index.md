@@ -6,7 +6,7 @@ title: Knaackbuilt.dev
 <h1 class="text-3xl font-bold py-4"><a href="/"> {{title}}</a></h1>
 {{ randomizer({})}}
 {{ topic({
-    title:"The internets",
+    title:"I like this stuff",
     topics:[
         {
             title:"HTML",
@@ -29,11 +29,13 @@ title: Knaackbuilt.dev
     topics:[
         {
             title:"Resume",
-            text:"default way to show I technically 'work'"
+            text:"default way to show I technically 'work'",
+            link: "/resume"
         },
         {
             title:"Things I've contributed to",
-            text:"list of projects you can disregard"
+            text:"list of projects you can disregard",
+            link: "/contrib"
         }
     ]
 
