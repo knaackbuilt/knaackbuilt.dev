@@ -5,7 +5,7 @@ module.exports = {
  ],
   theme: {
     fontFamily: {
-      sans: ['espysans', 'sans-serif']
+      sans: ['mukta', 'sans-serif']
      },
     extend: {},
   },

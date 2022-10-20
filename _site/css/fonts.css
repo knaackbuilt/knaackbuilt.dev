@@ -11,3 +11,15 @@
     font-style: bold;
     src: url(../fonts/EspySansRevivedTwelve-Bold.ttf) format("truetype");
     }
+@font-face {
+    font-family: 'mukta';
+    font-weight: 400;
+    font-style: normal;
+    src: url(../fonts/Mukta-Regular.ttf) format("truetype");
+    }
+@font-face {
+    font-family: 'mukta';
+    font-weight: 700;
+    font-style: bold;
+    src: url(../fonts/Mukta-Bold.ttf) format("truetype");
+    }
