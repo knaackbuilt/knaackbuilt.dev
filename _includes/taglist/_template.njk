@@ -1,8 +1,14 @@
 <section class="">
 <ul class="">
 {% for tag in params.tags %}
-<li class="my-3  flex align-center justify-between"><a href="{{tag.link}}" class="">{{tag.title}}</a>
-<div>{% for category in tag.categories %}<span class="ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap {{category.text}}" x-ref="{{category.text}}">{{category.text}}</span>{% endfor %}</div>
+<li class="my-3 flex align-center justify-between {% if tag.frontend %}frontend{%endif%} {% if tag.product %}product{%endif%} {% if tag.fullstack %}fullstack{%endif%} {% if tag.content %}content{%endif%}">
+    <a href="{{tag.link}}" class="" >{{tag.title}}</a>
+        <div>
+        {% if tag.frontend %}<span class="ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap front">front-end</span>{%endif%}
+        {% if tag.fullstack %}<span class="ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap fullstack">full stack</span>{%endif%}
+        {% if tag.product %}<span class="ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap prod">product</span>{%endif%}
+        {% if tag.content %}<span class="ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap content">content</span>{%endif%}
+        </div>
 </li>
 {% endfor %}
 </ul>

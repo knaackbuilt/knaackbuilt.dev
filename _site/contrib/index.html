@@ -42,45 +42,86 @@
         '<p class="font-espy">' + quote.text + '</p>';
     })();
   </script>
-    <h2 class=" uppercase font-bold py-2 md:text-center">Projects and How I Contributed:</h2>
+    
+
+<h2 class=" uppercase font-bold py-2 md:text-center">Projects and How I Contributed:</h2>
 <div class="" x-data="">    
 <form class="md:text-center">
 <label for="frontend" class="font-espy text-sm">Front-end Web Development</label>
-<input type="checkbox" id="frontend" class="border border-black rounded" @click="findfront()">
+<input type="checkbox" id="frontend" class="border border-black rounded">
 <label for="product" class="font-espy text-sm ml-4">Product Management</label>
-<input type="checkbox" id="product" class="border border-black rounded" @click="findproduct()">
+<input type="checkbox" id="product" class="border border-black rounded">
 </form>
 <section class="">
 <ul class="">
-<li class="my-3  flex align-center justify-between"><a href="https://ny.gov" class="">The Official Website of the State of New York - ny.gov</a>
-<div><span class="ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap frontend" x-ref="frontend">frontend</span><span class="ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap product" x-ref="product">product</span></div>
+
+<li class="my-3 flex align-center justify-between frontend product  ">
+    <a href="https://ny.gov" class="" >The Official Website of the State of New York - ny.gov</a>
+        <div>
+        <span class="ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap front">front-end</span>
+        
+        <span class="ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap prod">product</span>
+        
+        </div>
 </li>
-<li class="my-3  flex align-center justify-between"><a href="https://governor.ny.gov" class="">The Official Website of the Governor State of New York - governor.ny.gov</a>
-<div><span class="ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap frontend" x-ref="frontend">frontend</span><span class="ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap product" x-ref="product">product</span></div>
+
+<li class="my-3 flex align-center justify-between frontend product  ">
+    <a href="https://governor.ny.gov" class="" >The Official Website of the Governor State of New York - governor.ny.gov</a>
+        <div>
+        <span class="ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap front">front-end</span>
+        
+        <span class="ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap prod">product</span>
+        
+        </div>
 </li>
-<li class="my-3  flex align-center justify-between"><a href="https://ogs.ny.gov" class="">Office of General Services - ogs.ny.gov</a>
-<div><span class="ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap content" x-ref="content">content</span><span class="ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap product" x-ref="product">product</span></div>
+
+<li class="my-3 flex align-center justify-between  product  content">
+    <a href="https://ogs.ny.gov" class="" >Office of General Services - ogs.ny.gov</a>
+        <div>
+        
+        
+        <span class="ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap prod">product</span>
+        <span class="ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap content">content</span>
+        </div>
 </li>
-<li class="my-3  flex align-center justify-between"><a href="https://nysds.dev" class="">NYS Digital Services Utilities - nysds.dev</a>
-<div><span class="ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap fullstack" x-ref="fullstack">fullstack</span></div>
+
+<li class="my-3 flex align-center justify-between   fullstack ">
+    <a href="https://nysds.dev" class="" >NYS Digital Services Utilities - nysds.dev</a>
+        <div>
+        
+        <span class="ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap fullstack">full stack</span>
+        
+        
+        </div>
 </li>
+
 </ul>
 </section>
 </div>
 <script>
-    function findfront(){
-        const front = document.querySelectorAll('.frontend');
-        console.log(front)
+    const frontID = document.getElementById('frontend')
+    const productID = document.getElementById('product')
+    frontID.addEventListener('click', matchymatch)
+    productID.addEventListener('click', matchymatch)
+    function matchymatch(){
+        const front = document.querySelectorAll('.front');
+        const product = document.querySelectorAll('.prod');
+        if (front) {
             for (let i = 0; i < front.length; i++) {
-                        front[i].classList.toggle('bg-yellow-500')
+                        front[i].classList.toggle('work')
+                        front[i].classList.toggle('active')
+
                     }
+            }
+        if (product) {
+            for (let i = 0; i < product.length; i++) {
+                        product[i].classList.toggle('work')
+                        product[i].classList.toggle('active')
+
+                    }
+            }
     }
-    function findproduct(){
-        const product = document.querySelectorAll('.product');
-            for (let i = 0; i < product.length; i++) { 
-                        product[i].classList.toggle('bg-yellow-500')
-                    }
-    }  
+
 </script>
     <footer class="font-espy mt-12 flex border-t-2 pt-2 border-gray-400">
       <p class="text-xs"> I'm building this site in the open so don't expect perfect. </p>
