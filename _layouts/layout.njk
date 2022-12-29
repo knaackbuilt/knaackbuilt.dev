@@ -17,12 +17,12 @@
     <h1 class="text-3xl font-bold py-4"><a href="/">Knaackbuilt.dev</a></h1>
     {{ randomizer({})}}
     {{ content | safe }}
-    <footer class="font-espy mt-12 flex border-t-2 pt-2 border-gray-400">
-      <p class="text-xs"> I'm building this site in the open, so it might not be perfect. </p>
-      <ul class="ml-auto inline-flex">
-      <li><a href="/sitemap.xml" class="font-bold text-xs mx-2"> XML Sitemap </a></li>
-      <li><a href="https://github.com/knaackbuilt/knaackbuilt.dev" class="font-bold text-xs mx-2">GitHub</a></li>
-      <li><a href="https://mastodon.social/@knaackbuilt" class="font-bold text-xs mx-2">Mastodon</a></li>
+    <footer class="font-espy mt-12 flex flex-col md:flex-row items-center border-t-2 pt-2 border-gray-400">
+      <p class="flex text-xs py-2"> I'm building this site in the open, so it might not be perfect. </p>
+      <ul class="flex flex-col sm:flex-row md:ml-auto">
+        <li class="sm:mx-2 py-2"><a href="/sitemap.xml" class="font-bold text-xs"> XML Sitemap </a></li>
+        <li class="sm:mx-2 py-2"><a href="https://github.com/knaackbuilt/knaackbuilt.dev" class="font-bold text-xs">GitHub</a></li>
+        <li class="sm:mx-2 py-2"><a href="https://mastodon.social/@knaackbuilt" class="font-bold text-xs">Mastodon</a></li>
       </ul>
       </footer>
     </main>
