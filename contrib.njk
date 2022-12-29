@@ -5,12 +5,30 @@ title: Projects and How I Contributed
 {% from './_includes/_components.njk' import topic, taglist  %}
 
 <h2 class=" uppercase font-bold py-2 md:text-center">{{title}}:</h2>
-<div class="" x-data="">    
-<form class="md:text-center">
-<label for="frontend" class="font-espy text-sm">Front-end Web Development</label>
-<input type="checkbox" id="frontend" class="border border-black rounded">
-<label for="product" class="font-espy text-sm ml-4">Product Management</label>
-<input type="checkbox" id="product" class="border border-black rounded">
+<div class="" x-data="{product: 'false', frontend: 'false', content: 'false', fullstack:'false'}">    
+<form class="">
+    <ul class="flex flex-col">
+        <li>    
+            <label for="frontend" class="font-espy text-sm">Front-end Development</label>
+            <input @click="frontend = ! frontend"
+            type="checkbox" id="frontend" class="border border-black rounded">
+        </li>
+        <li>
+            <label for="fullstack" class="font-espy text-sm">Full-stack Development</label>
+            <input @click="fullstack = ! fullstack"
+            type="checkbox" id="fullstack" class="border border-black rounded">
+        </li>
+        <li>
+            <label for="product" class="font-espy text-sm">Product Management</label>
+            <input @click="product = ! product"
+            type="checkbox" id="product" class="border border-black rounded">
+        </li>
+        <li>
+            <label for="content" class="font-espy text-sm">Content Management</label>
+            <input @click="content = ! content"
+            type="checkbox" id="content" class="border border-black rounded">
+        </li>
+    </ul>
 </form>
 {{ taglist({
     tags:[
@@ -41,28 +59,3 @@ title: Projects and How I Contributed
 })
 }}
 </div>
-<script>
-    const frontID = document.getElementById('frontend')
-    const productID = document.getElementById('product')
-    frontID.addEventListener('click', matchymatch)
-    productID.addEventListener('click', matchymatch)
-    function matchymatch(){
-        const front = document.querySelectorAll('.front');
-        const product = document.querySelectorAll('.prod');
-        if (front) {
-            for (let i = 0; i < front.length; i++) {
-                        front[i].classList.toggle('work')
-                        front[i].classList.toggle('active')
-
-                    }
-            }
-        if (product) {
-            for (let i = 0; i < product.length; i++) {
-                        product[i].classList.toggle('work')
-                        product[i].classList.toggle('active')
-
-                    }
-            }
-    }
-
-</script>

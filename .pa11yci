@@ -6,6 +6,5 @@
           { "destination": "./pa11y_reports", "includeZeroIssues": true }
         ]
       ]
-    },
-    "urls": ["https://knaackbuilt.dev"]
+    }
   }

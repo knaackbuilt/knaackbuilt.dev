@@ -52,51 +52,83 @@
     
 
 <h2 class=" uppercase font-bold py-2 md:text-center">Projects and How I Contributed:</h2>
-<div class="" x-data="">    
-<form class="md:text-center">
-<label for="frontend" class="font-espy text-sm">Front-end Web Development</label>
-<input type="checkbox" id="frontend" class="border border-black rounded">
-<label for="product" class="font-espy text-sm ml-4">Product Management</label>
-<input type="checkbox" id="product" class="border border-black rounded">
+<div class="" x-data="{product: 'false', frontend: 'false', content: 'false', fullstack:'false'}">    
+<form class="">
+    <ul class="flex flex-col">
+        <li>    
+            <label for="frontend" class="font-espy text-sm">Front-end Development</label>
+            <input @click="frontend = ! frontend"
+            type="checkbox" id="frontend" class="border border-black rounded">
+        </li>
+        <li>
+            <label for="fullstack" class="font-espy text-sm">Full-stack Development</label>
+            <input @click="fullstack = ! fullstack"
+            type="checkbox" id="fullstack" class="border border-black rounded">
+        </li>
+        <li>
+            <label for="product" class="font-espy text-sm">Product Management</label>
+            <input @click="product = ! product"
+            type="checkbox" id="product" class="border border-black rounded">
+        </li>
+        <li>
+            <label for="content" class="font-espy text-sm">Content Management</label>
+            <input @click="content = ! content"
+            type="checkbox" id="content" class="border border-black rounded">
+        </li>
+    </ul>
 </form>
 <section class="">
 <ul class="">
 
-<li class="my-3 flex align-center justify-between frontend product  ">
-    <a href="https://ny.gov" class="" >The Official Website of the State of New York - ny.gov</a>
+<li class="my-3 flex align-center justify-between">
+    <a href="https://ny.gov" class="underline text-blue-900">The Official Website of the State of New York - ny.gov</a>
         <div>
-        <span class="ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap front">front-end</span>
         
-        <span class="ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap prod">product</span>
+        <span class="ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap" :class="frontend ? '' : 'bg-yellow-400'">front-end</span>
+        
+        
+        
+        <span class="ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap" :class="product ? '' : 'bg-yellow-400'">product</span>
+        
         
         </div>
 </li>
 
-<li class="my-3 flex align-center justify-between frontend product  ">
-    <a href="https://governor.ny.gov" class="" >The Official Website of the Governor State of New York - governor.ny.gov</a>
+<li class="my-3 flex align-center justify-between">
+    <a href="https://governor.ny.gov" class="underline text-blue-900">The Official Website of the Governor State of New York - governor.ny.gov</a>
         <div>
-        <span class="ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap front">front-end</span>
         
-        <span class="ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap prod">product</span>
+        <span class="ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap" :class="frontend ? '' : 'bg-yellow-400'">front-end</span>
+        
+        
+        
+        <span class="ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap" :class="product ? '' : 'bg-yellow-400'">product</span>
+        
         
         </div>
 </li>
 
-<li class="my-3 flex align-center justify-between  product  content">
-    <a href="https://ogs.ny.gov" class="" >Office of General Services - ogs.ny.gov</a>
+<li class="my-3 flex align-center justify-between">
+    <a href="https://ogs.ny.gov" class="underline text-blue-900">Office of General Services - ogs.ny.gov</a>
         <div>
         
         
-        <span class="ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap prod">product</span>
-        <span class="ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap content">content</span>
+        
+        <span class="ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap" :class="product ? '' : 'bg-yellow-400'">product</span>
+        
+        
+        <span class="ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap" :class="content ? '' : 'bg-yellow-400'">content</span>
+        
         </div>
 </li>
 
-<li class="my-3 flex align-center justify-between   fullstack ">
-    <a href="https://nysds.dev" class="" >NYS Digital Services Utilities - nysds.dev</a>
+<li class="my-3 flex align-center justify-between">
+    <a href="https://nysds.dev" class="underline text-blue-900">NYS Digital Services Utilities - nysds.dev</a>
         <div>
         
-        <span class="ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap fullstack">full stack</span>
+        
+        <span class="ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap" :class="fullstack ? '' : 'bg-yellow-400'">full stack</span>
+        
         
         
         </div>
@@ -105,31 +137,6 @@
 </ul>
 </section>
 </div>
-<script>
-    const frontID = document.getElementById('frontend')
-    const productID = document.getElementById('product')
-    frontID.addEventListener('click', matchymatch)
-    productID.addEventListener('click', matchymatch)
-    function matchymatch(){
-        const front = document.querySelectorAll('.front');
-        const product = document.querySelectorAll('.prod');
-        if (front) {
-            for (let i = 0; i < front.length; i++) {
-                        front[i].classList.toggle('work')
-                        front[i].classList.toggle('active')
-
-                    }
-            }
-        if (product) {
-            for (let i = 0; i < product.length; i++) {
-                        product[i].classList.toggle('work')
-                        product[i].classList.toggle('active')
-
-                    }
-            }
-    }
-
-</script>
     <footer class="font-espy mt-12 flex flex-col md:flex-row items-center border-t-2 pt-2 border-gray-400">
       <p class="flex text-xs py-2"> I'm building this site in the open, so it might not be perfect. </p>
       <ul class="flex flex-col sm:flex-row md:ml-auto">
