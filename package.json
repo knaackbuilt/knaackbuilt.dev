@@ -2,6 +2,8 @@
   "devDependencies": {
     "@11ty/eleventy": "^1.0.1",
     "js-yaml": "^4.1.0",
+    "pa11y-ci": "^3.0.1",
+    "pa11y-ci-reporter-html": "^5.0.2",
     "tailwindcss": "^3.0.24"
   },
   "name": "knaackbuilt.dev",
@@ -9,7 +11,7 @@
   "version": "1.0.0",
   "main": ".eleventy.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "pa11y-ci",
     "start": "eleventy --serve & npx tailwindcss -i tailwind-setup.css -o css/tailwind.css --minify --watch"
   },
   "repository": {
