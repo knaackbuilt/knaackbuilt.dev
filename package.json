@@ -11,7 +11,7 @@
   "version": "1.0.0",
   "main": ".eleventy.js",
   "scripts": {
-    "test": "pa11y-ci",
+    "test": "npx pa11y-ci --sitemap https://knaackbuilt.dev/sitemap.xml",
     "start": "eleventy --serve & npx tailwindcss -i tailwind-setup.css -o css/tailwind.css --minify --watch"
   },
   "repository": {
