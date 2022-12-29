@@ -1,7 +1,6 @@
 {
     "defaults": {
       "reporters": [
-        "cli",
         [
           "pa11y-ci-reporter-html",
           { "destination": "./pa11y_reports", "includeZeroIssues": true }

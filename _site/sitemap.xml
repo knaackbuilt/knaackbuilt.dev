@@ -2,17 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
         <url>
-            <loc>/</loc>
+            <loc>https://knaackbuilt.dev/</loc>
             <lastmod>2022-04-29T18:48:23.712Z</lastmod>
         </url>
     
         <url>
-            <loc>/resume/</loc>
+            <loc>https://knaackbuilt.dev/resume/</loc>
             <lastmod>2022-10-20T00:59:46.481Z</lastmod>
         </url>
     
         <url>
-            <loc>/contrib/</loc>
+            <loc>https://knaackbuilt.dev/contrib/</loc>
             <lastmod>2022-10-20T01:19:07.303Z</lastmod>
         </url>
     
