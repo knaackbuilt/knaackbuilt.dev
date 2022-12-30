@@ -50,33 +50,32 @@
     })();
   </script>
     
-
+<section class="" x-data="{product: 'false', frontend: 'false', content: 'false', fullstack:'false'}">    
 <h2 class=" uppercase font-bold py-2 md:text-center">Projects and How I Contributed:</h2>
-<div class="" x-data="{product: 'false', frontend: 'false', content: 'false', fullstack:'false'}">    
-<div class="">
-    <ul class="flex flex-col">
-        <li>    
-            <label for="frontend" class="font-espy text-sm">Front-end Development</label>
-            <input @click="frontend = ! frontend"
-            type="checkbox" id="frontend" class="border border-black rounded">
-        </li>
-        <li>
-            <label for="fullstack" class="font-espy text-sm">Full-stack Development</label>
-            <input @click="fullstack = ! fullstack"
-            type="checkbox" id="fullstack" class="border border-black rounded">
-        </li>
-        <li>
-            <label for="product" class="font-espy text-sm">Product Management</label>
-            <input @click="product = ! product"
-            type="checkbox" id="product" class="border border-black rounded">
-        </li>
-        <li>
-            <label for="content" class="font-espy text-sm">Content Management</label>
-            <input @click="content = ! content"
-            type="checkbox" id="content" class="border border-black rounded">
-        </li>
-    </ul>
-</div>
+    <div class="">
+        <ul class="flex flex-col">
+            <li>    
+                <label for="frontend" class="font-espy text-sm">Front-end Development</label>
+                <input @click="frontend = ! frontend"
+                type="checkbox" id="frontend" class="border border-black rounded">
+            </li>
+            <li>
+                <label for="fullstack" class="font-espy text-sm">Full-stack Development</label>
+                <input @click="fullstack = ! fullstack"
+                type="checkbox" id="fullstack" class="border border-black rounded">
+            </li>
+            <li>
+                <label for="product" class="font-espy text-sm">Product Management</label>
+                <input @click="product = ! product"
+                type="checkbox" id="product" class="border border-black rounded">
+            </li>
+            <li>
+                <label for="content" class="font-espy text-sm">Content Management</label>
+                <input @click="content = ! content"
+                type="checkbox" id="content" class="border border-black rounded">
+            </li>
+        </ul>
+    </div>
 <section class="">
 <ul class="">
 
@@ -131,12 +130,14 @@
         
         
         
+        <span class="ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap" :class="content ? '' : 'bg-yellow-400'">content</span>
+        
         </div>
 </li>
 
 </ul>
 </section>
-</div>
+</section>
     <footer class="font-espy mt-12 flex flex-col md:flex-row items-center border-t-2 pt-2 border-gray-400">
       <p class="flex text-xs py-2"> I'm building this site in the open, so it might not be perfect. </p>
       <ul class="flex flex-col sm:flex-row md:ml-auto">

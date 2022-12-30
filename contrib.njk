@@ -3,33 +3,32 @@ layout: layout.njk
 title: Projects and How I Contributed
 ---
 {% from './_includes/_components.njk' import topic, taglist  %}
-
+<section class="" x-data="{product: 'false', frontend: 'false', content: 'false', fullstack:'false'}">    
 <h2 class=" uppercase font-bold py-2 md:text-center">{{title}}:</h2>
-<div class="" x-data="{product: 'false', frontend: 'false', content: 'false', fullstack:'false'}">    
-<div class="">
-    <ul class="flex flex-col">
-        <li>    
-            <label for="frontend" class="font-espy text-sm">Front-end Development</label>
-            <input @click="frontend = ! frontend"
-            type="checkbox" id="frontend" class="border border-black rounded">
-        </li>
-        <li>
-            <label for="fullstack" class="font-espy text-sm">Full-stack Development</label>
-            <input @click="fullstack = ! fullstack"
-            type="checkbox" id="fullstack" class="border border-black rounded">
-        </li>
-        <li>
-            <label for="product" class="font-espy text-sm">Product Management</label>
-            <input @click="product = ! product"
-            type="checkbox" id="product" class="border border-black rounded">
-        </li>
-        <li>
-            <label for="content" class="font-espy text-sm">Content Management</label>
-            <input @click="content = ! content"
-            type="checkbox" id="content" class="border border-black rounded">
-        </li>
-    </ul>
-</div>
+    <div class="">
+        <ul class="flex flex-col">
+            <li>    
+                <label for="frontend" class="font-espy text-sm">Front-end Development</label>
+                <input @click="frontend = ! frontend"
+                type="checkbox" id="frontend" class="border border-black rounded">
+            </li>
+            <li>
+                <label for="fullstack" class="font-espy text-sm">Full-stack Development</label>
+                <input @click="fullstack = ! fullstack"
+                type="checkbox" id="fullstack" class="border border-black rounded">
+            </li>
+            <li>
+                <label for="product" class="font-espy text-sm">Product Management</label>
+                <input @click="product = ! product"
+                type="checkbox" id="product" class="border border-black rounded">
+            </li>
+            <li>
+                <label for="content" class="font-espy text-sm">Content Management</label>
+                <input @click="content = ! content"
+                type="checkbox" id="content" class="border border-black rounded">
+            </li>
+        </ul>
+    </div>
 {{ taglist({
     tags:[
         {
@@ -53,9 +52,10 @@ title: Projects and How I Contributed
         {
             title:"NYS Digital Services Utilities - nysds.dev",
             fullstack: "yep",
+            content: "yessir",
             link:"https://nysds.dev"
         }
     ]
 })
 }}
-</div>
+</section>
