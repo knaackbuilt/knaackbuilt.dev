@@ -50,7 +50,12 @@
     })();
   </script>
     
-<section class="" x-data="{product: 'false', frontend: 'false', content: 'false', fullstack:'false'}">    
+<section class="" x-data="{
+    product: 'false', 
+    frontend: 'false', 
+    content: 'false', 
+    fullstack:'false',
+    all: 'false'}">    
 <h2 class=" uppercase font-bold py-2 md:text-center">Projects and How I Contributed:</h2>
     <div class="">
         <ul class="flex flex-col">
@@ -74,69 +79,137 @@
                 <input @click="content = ! content"
                 type="checkbox" id="content" class="border border-black rounded">
             </li>
+            <li>
+                <label for="all" class="font-espy text-sm">Don't want to bother with clicking each one and want to see it all?</label>
+                <input @click="all = ! all"
+                type="checkbox" id="all" class="border border-black rounded">
+            </li>
         </ul>
     </div>
-<section class="">
+
 <ul class="">
 
-<li class="my-3 flex align-center justify-between" >
-    <a href="https://ny.gov" class="underline text-blue-900">The Official Website of the State of New York - ny.gov</a>
-        <div>
+
+<li class="my-3 flex flex-col bg-slate-300 p-4 border border-dashed border-black" >
+    <div class="">
+        <a href="https://ny.gov" class="flex items-center underline text-blue-900">
+             The Official Website of the State of New York - ny.gov
+        </a>
+    </div>  
+    <div class="mb-2">
         
-        <span class="ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap" :class="frontend ? '' : 'bg-yellow-400'">front-end</span>
+        <span class="first-of-type:ml-0 ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap" :class="frontend ? '' : 'bg-yellow-400'">front-end</span>
+        <template x-if="!frontend">
+            <p> highlights include: Twig templating, svelte component development, sass, general css and html, presentational javascript </p>
+        </template>
         
         
         
-        <span class="ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap" :class="product ? '' : 'bg-yellow-400'">product</span>
+        <span class="first-of-type:ml-0 ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap" :class="product ? '' : 'bg-yellow-400'">product</span>
+        <template x-if="!product">
+            <p> highlights include:  </p>
+        </template>
         
         
-        </div>
+        <span class="first-of-type:ml-0 ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap" :class="content ? '' : 'bg-yellow-400'">content</span>
+        <template x-if="!content">
+            <p> highlights include:  </p>
+        </template>
+        
+    </div>
+      
 </li>
 
-<li class="my-3 flex align-center justify-between" >
-    <a href="https://governor.ny.gov" class="underline text-blue-900">The Official Website of the Governor State of New York - governor.ny.gov</a>
-        <div>
+
+
+<li class="my-3 flex flex-col bg-slate-300 p-4 border border-dashed border-black" >
+    <div class="">
+        <a href="https://governor.ny.gov" class="flex items-center underline text-blue-900">
+             The Official Website of the Governor State of New York - governor.ny.gov
+        </a>
+    </div>  
+    <div class="mb-2">
         
-        <span class="ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap" :class="frontend ? '' : 'bg-yellow-400'">front-end</span>
+        <span class="first-of-type:ml-0 ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap" :class="frontend ? '' : 'bg-yellow-400'">front-end</span>
+        <template x-if="!frontend">
+            <p> highlights include:  </p>
+        </template>
         
         
         
-        <span class="ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap" :class="product ? '' : 'bg-yellow-400'">product</span>
+        <span class="first-of-type:ml-0 ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap" :class="product ? '' : 'bg-yellow-400'">product</span>
+        <template x-if="!product">
+            <p> highlights include:  </p>
+        </template>
         
         
-        </div>
+        <span class="first-of-type:ml-0 ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap" :class="content ? '' : 'bg-yellow-400'">content</span>
+        <template x-if="!content">
+            <p> highlights include:  </p>
+        </template>
+        
+    </div>
+      
 </li>
 
-<li class="my-3 flex align-center justify-between" >
-    <a href="https://ogs.ny.gov" class="underline text-blue-900">Office of General Services - ogs.ny.gov</a>
-        <div>
+
+
+<li class="my-3 flex flex-col bg-slate-300 p-4 border border-dashed border-black" >
+    <div class="">
+        <a href="https://ogs.ny.gov" class="flex items-center underline text-blue-900">
+             Office of General Services - ogs.ny.gov
+        </a>
+    </div>  
+    <div class="mb-2">
         
         
         
-        <span class="ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap" :class="product ? '' : 'bg-yellow-400'">product</span>
+        <span class="first-of-type:ml-0 ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap" :class="product ? '' : 'bg-yellow-400'">product</span>
+        <template x-if="!product">
+            <p> highlights include:  </p>
+        </template>
         
         
-        <span class="ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap" :class="content ? '' : 'bg-yellow-400'">content</span>
+        <span class="first-of-type:ml-0 ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap" :class="content ? '' : 'bg-yellow-400'">content</span>
+        <template x-if="!content">
+            <p> highlights include:  </p>
+        </template>
         
-        </div>
+    </div>
+      
 </li>
 
-<li class="my-3 flex align-center justify-between" >
-    <a href="https://nysds.dev" class="underline text-blue-900">NYS Digital Services Utilities - nysds.dev</a>
-        <div>
+
+
+<li class="my-3 flex flex-col bg-slate-300 p-4 border border-dashed border-black" >
+    <div class="">
+        <a href="https://nysds.dev" class="flex items-center underline text-blue-900">
+             NYS Digital Services Utilities - nysds.dev
+        </a>
+    </div>  
+    <div class="mb-2">
         
         
-        <span class="ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap" :class="fullstack ? '' : 'bg-yellow-400'">full stack</span>
+        <span class="first-of-type:ml-0 ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap" :class="fullstack ? '' : 'bg-yellow-400'">full stack</span>
+        <template x-if="!fullstack">
+            <p> highlights include:  </p>
+        </template>
         
         
         
-        <span class="ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap" :class="content ? '' : 'bg-yellow-400'">content</span>
+        <span class="first-of-type:ml-0 ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap" :class="content ? '' : 'bg-yellow-400'">content</span>
+        <template x-if="!content">
+            <p> highlights include:  </p>
+        </template>
         
-        </div>
+    </div>
+      
 </li>
+
+
 
 </ul>
-</section>
+
 </section>
     <footer class="font-espy mt-12 flex flex-col md:flex-row items-center border-t-2 pt-2 border-gray-400">
       <p class="flex text-xs py-2"> I'm building this site in the open, so it might not be perfect. </p>

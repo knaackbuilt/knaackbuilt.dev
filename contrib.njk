@@ -3,7 +3,12 @@ layout: layout.njk
 title: Projects and How I Contributed
 ---
 {% from './_includes/_components.njk' import topic, taglist  %}
-<section class="" x-data="{product: 'false', frontend: 'false', content: 'false', fullstack:'false'}">    
+<section class="" x-data="{
+    product: 'false', 
+    frontend: 'false', 
+    content: 'false', 
+    fullstack:'false',
+    all: 'false'}">    
 <h2 class=" uppercase font-bold py-2 md:text-center">{{title}}:</h2>
     <div class="">
         <ul class="flex flex-col">
@@ -27,6 +32,11 @@ title: Projects and How I Contributed
                 <input @click="content = ! content"
                 type="checkbox" id="content" class="border border-black rounded">
             </li>
+            <li>
+                <label for="all" class="font-espy text-sm">Don't want to bother with clicking each one and want to see it all?</label>
+                <input @click="all = ! all"
+                type="checkbox" id="all" class="border border-black rounded">
+            </li>
         </ul>
     </div>
 {{ taglist({
@@ -34,13 +44,18 @@ title: Projects and How I Contributed
         {
             title: "The Official Website of the State of New York - ny.gov",
             frontend: "yep",
+            frontdef:"Twig templating, svelte component development, sass, general css and html, presentational javascript",
             product: "yep",
+            productdef: "",
+            content: "yes",
+            contentdef:"",
             link:"https://ny.gov"
         },
         {
             title:"The Official Website of the Governor State of New York - governor.ny.gov",
             frontend: "yep",
             product: "yep",
+            content: "yes",
             link:"https://governor.ny.gov"
         },
         {
