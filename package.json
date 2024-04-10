@@ -3,8 +3,7 @@
     "@11ty/eleventy": "^1.0.1",
     "js-yaml": "^4.1.0",
     "pa11y-ci": "^3.0.1",
-    "pa11y-ci-reporter-html": "^5.0.2",
-    "tailwindcss": "^3.0.24"
+    "pa11y-ci-reporter-html": "^5.0.2"
   },
   "name": "knaackbuilt.dev",
   "description": "This is my personal website",
@@ -12,7 +11,7 @@
   "main": ".eleventy.js",
   "scripts": {
     "test": "npx pa11y-ci --sitemap https://knaackbuilt.dev/sitemap.xml",
-    "start": "npx eleventy --serve & npx tailwindcss -i tailwind-setup.css -o css/tailwind.css --minify --watch"
+    "start": "npx @11ty/eleventy --serve"
   },
   "repository": {
     "type": "git",
