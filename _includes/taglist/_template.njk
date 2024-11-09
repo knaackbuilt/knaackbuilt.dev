@@ -47,11 +47,14 @@
                     <a href="{{tag.link}}" class="flex items-center underline text-blue-900">
                         {{tag.title}}
                     </a>
+                    <p>
+                        {{tag.description}}
+                    </p>
                 </div>  
-                <div class="mb-2">
-                    {% if tag.frontend %}
+                <div class="mb-2"> <!-- need to recategorize this -->
+                    {% if tag.standard%}
                     <span class="first-of-type:ml-0 ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap" :class="frontend ? '' : 'bg-yellow-400'">front-end</span>
-                    <template x-if="!frontend">
+                    <template x-if="!standard">
                         <p> highlights include: {{tag.frontdef}} </p>
                     </template>
                     {%endif%}
