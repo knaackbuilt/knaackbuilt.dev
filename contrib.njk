@@ -33,18 +33,19 @@ title: Projects and How I Contributed
                 type="checkbox" id="content" class="border border-black rounded">
             </li>
             <li>
-                <label for="all" class="font-espy text-sm">Don't want to bother with clicking each one and want to see it all?</label>
-                <input @click="all = ! all"
+                <label for="all" class="font-espy text-sm">Don't want to bother with clicking each one and want to see it all? - kp this is def broken.</label>
+                <input @click="alert('It is totally broken. I use alpinejs to write simple js without repeating common patterns and Im pretty much dumb with this one and couldnt in 10 seconds get it to highlight all. Ill have to revisit and fix properly')"
                 type="checkbox" id="all" class="border border-black rounded">
             </li>
         </ul>
     </div>
 {{ taglist({
+    listType: "contrib",
     tags:[
         {
             title: "The Official Website of the State of New York - ny.gov",
             frontend: "yep",
-            frontdef:"Twig templating, svelte component development, sass, general css and html, presentational javascript",
+            frontdef:"Twig templating, svelte component development, sass, general css and html, presentational javascript, various drupalings",
             product: "yep",
             productdef: "",
             content: "yes",

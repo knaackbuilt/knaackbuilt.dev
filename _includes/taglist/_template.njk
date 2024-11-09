@@ -1,42 +1,81 @@
 
-<ul class="">
-{% for tag in params.tags %}
+{% if params.listType == 'contrib'%}
+    <ul class="">
+        {% for tag in params.tags %}
+            <li class="my-3 flex flex-col bg-slate-300 p-4 border border-dashed border-black" >
+                <div class="">
+                    <a href="{{tag.link}}" class="flex items-center underline text-blue-900">
+                        {{tag.title}}
+                    </a>
+                </div>  
+                <div class="mb-2">
+                    {% if tag.frontend %}
+                    <span class="first-of-type:ml-0 ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap" :class="frontend ? '' : 'bg-yellow-400'">front-end</span>
+                    <template x-if="!frontend">
+                        <p> highlights include: {{tag.frontdef}} </p>
+                    </template>
+                    {%endif%}
+                    {% if tag.fullstack %}
+                    <span class="first-of-type:ml-0 ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap" :class="fullstack ? '' : 'bg-yellow-400'">full stack</span>
+                    <template x-if="!fullstack">
+                        <p> highlights include: {{tag.fulldef}} </p>
+                    </template>
+                    {%endif%}
+                    {% if tag.product %}
+                    <span class="first-of-type:ml-0 ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap" :class="product ? '' : 'bg-yellow-400'">product</span>
+                    <template x-if="!product">
+                        <p> highlights include: {{tag.productdef}} </p>
+                    </template>
+                    {%endif%}
+                    {% if tag.content %}
+                    <span class="first-of-type:ml-0 ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap" :class="content ? '' : 'bg-yellow-400'">content</span>
+                    <template x-if="!content">
+                        <p> highlights include: {{tag.contentdef}} </p>
+                    </template>
+                    {%endif%}
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+{% endif %}
 
-<li class="my-3 flex flex-col bg-slate-300 p-4 border border-dashed border-black" >
-    <div class="">
-        <a href="{{tag.link}}" class="flex items-center underline text-blue-900">
-             {{tag.title}}
-        </a>
-    </div>  
-    <div class="mb-2">
-        {% if tag.frontend %}
-        <span class="first-of-type:ml-0 ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap" :class="frontend ? '' : 'bg-yellow-400'">front-end</span>
-        <template x-if="!frontend">
-            <p> highlights include: {{tag.frontdef}} </p>
-        </template>
-        {%endif%}
-        {% if tag.fullstack %}
-        <span class="first-of-type:ml-0 ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap" :class="fullstack ? '' : 'bg-yellow-400'">full stack</span>
-        <template x-if="!fullstack">
-            <p> highlights include: {{tag.fulldef}} </p>
-        </template>
-        {%endif%}
-        {% if tag.product %}
-        <span class="first-of-type:ml-0 ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap" :class="product ? '' : 'bg-yellow-400'">product</span>
-        <template x-if="!product">
-            <p> highlights include: {{tag.productdef}} </p>
-        </template>
-        {%endif%}
-        {% if tag.content %}
-        <span class="first-of-type:ml-0 ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap" :class="content ? '' : 'bg-yellow-400'">content</span>
-        <template x-if="!content">
-            <p> highlights include: {{tag.contentdef}} </p>
-        </template>
-        {%endif%}
-    </div>
-      
-</li>
+{% if params.listType == 'a11yList'%}
+ <ul class="">
+        {% for tag in params.tags %}
+            <li class="my-3 flex flex-col bg-slate-300 p-4 border border-dashed border-black" >
+                <div class="">
+                    <a href="{{tag.link}}" class="flex items-center underline text-blue-900">
+                        {{tag.title}}
+                    </a>
+                </div>  
+                <div class="mb-2">
+                    {% if tag.frontend %}
+                    <span class="first-of-type:ml-0 ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap" :class="frontend ? '' : 'bg-yellow-400'">front-end</span>
+                    <template x-if="!frontend">
+                        <p> highlights include: {{tag.frontdef}} </p>
+                    </template>
+                    {%endif%}
+                    {% if tag.fullstack %}
+                    <span class="first-of-type:ml-0 ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap" :class="fullstack ? '' : 'bg-yellow-400'">full stack</span>
+                    <template x-if="!fullstack">
+                        <p> highlights include: {{tag.fulldef}} </p>
+                    </template>
+                    {%endif%}
+                    {% if tag.product %}
+                    <span class="first-of-type:ml-0 ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap" :class="product ? '' : 'bg-yellow-400'">product</span>
+                    <template x-if="!product">
+                        <p> highlights include: {{tag.productdef}} </p>
+                    </template>
+                    {%endif%}
+                    {% if tag.content %}
+                    <span class="first-of-type:ml-0 ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap" :class="content ? '' : 'bg-yellow-400'">content</span>
+                    <template x-if="!content">
+                        <p> highlights include: {{tag.contentdef}} </p>
+                    </template>
+                    {%endif%}
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
 
-{% endfor %}
-
-</ul>
+{% endif %}
