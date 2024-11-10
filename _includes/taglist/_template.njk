@@ -42,8 +42,13 @@
 {% if params.listType == 'a11yList'%}
  <ul class="">
         {% for tag in params.tags %}
-            <li class="my-3 flex flex-col bg-slate-300 p-4 border border-dashed border-black" >
-                <div class="">
+            <li class="my-3 flex flex-col bg-slate-300 p-4 border border-dashed border-black"
+                {% if tag.type == 'standard'%}:class="standard ? '' : 'bg-yellow-400'" {% endif%}
+                {% if tag.type == 'consultant'%}:class="consultant ? '' : 'bg-yellow-400'" {% endif%}
+                {% if tag.type == 'community'%}:class="community ? '' : 'bg-yellow-400'" {% endif%}
+                {% if tag.type == 'testing'%}:class="testing ? '' : 'bg-yellow-400'" {% endif%}
+                >
+                <div class="" >
                     <a href="{{tag.link}}" class="flex items-center underline text-blue-900">
                         {{tag.title}}
                     </a>
@@ -51,7 +56,7 @@
                         {{tag.description}}
                     </p>
                 </div>  
-                <div class="mb-2"> <!-- need to recategorize this -->
+                {# <div class="mb-2"> <!-- need to recategorize this -->
                     {% if tag.standard%}
                     <span class="first-of-type:ml-0 ml-4 p-1 text-xs font-espy bg-gray-400 whitespace-nowrap" :class="frontend ? '' : 'bg-yellow-400'">front-end</span>
                     <template x-if="!standard">
@@ -76,7 +81,7 @@
                         <p> highlights include: {{tag.contentdef}} </p>
                     </template>
                     {%endif%}
-                </div>
+                </div> #}
             </li>
         {% endfor %}
     </ul>

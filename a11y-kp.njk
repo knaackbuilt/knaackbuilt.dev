@@ -5,8 +5,41 @@ title: Knaackbuilt.dev
  {% from './_includes/_components.njk' import topic, randomizer, taglist  %}
 
 
-<h1 class="font-extrabold text-xl mt-8"> Accessibility Resources </h1>
-<p class="">Ok so check this stuff out - adding way more in soon</p>
+<section class="" x-data="{
+    standard: 'false', 
+    consultant: 'false', 
+    community: 'false', 
+    testing:'false'}">    
+<h2 class=" uppercase font-bold py-2 md:text-center">Accessibility Resources:</h2>
+<p class="md:text-center mb-4">Ok so check this stuff out - adding way more in soon</p>
+    <div class="border p-4">
+        <ul class="flex flex-col">
+            <li>    
+                <label for="standard" class="font-espy text-sm">Accessibility Standard</label>
+                <input @click="standard = ! standard"
+                type="checkbox" id="standard" class="border border-black rounded">
+            </li>
+            <li>
+                <label for="consultant" class="font-espy text-sm">Consultant Company that isn't total garbage</label>
+                <input @click="consultant = ! consultant"
+                type="checkbox" id="consultant" class="border border-black rounded">
+            </li>
+            <li>
+                <label for="community" class="font-espy text-sm">Trusted Accessibility Community Member or Expert</label>
+                <input @click="community = ! community"
+                type="checkbox" id="community" class="border border-black rounded">
+            </li>
+            <li>
+                <label for="testing" class="font-espy text-sm">Testing Tool (automated or manual)</label>
+                <input @click="testing = ! testing"
+                type="checkbox" id="testing" class="border border-black rounded">
+            </li>
+        </ul>
+    </div>
+
+
+
+
 
 {{ taglist({
     listType: "a11yList",
@@ -14,16 +47,30 @@ title: Knaackbuilt.dev
         {
             title: "Web Content Accessibility Guidelines (WCAG 2.2)",
             description: "This is the standard setting body (w3c) and the official recommendation that gets adopted by various organizations.",
-            link:"https://www.w3.org/TR/WCAG22/"
+            link:"https://www.w3.org/TR/WCAG22/",
+            type: "standard"
         },
         {
             title: "Section 508",
             description: "Section 508 of the rehabilitation act is where we get federal conformance regulation from. ",
-            link:"https://www.w3.org/TR/WCAG22/"
+            link:"https://www.w3.org/TR/WCAG22/",
+            type: "standard"
+        },
+        {
+            title: "ANDI (Accessible Name and Description Inspector)",
+            description: "ANDI is a fnastastic tool for manual inspection of accessible names and properties of DOM elements. ",
+            link:"https://www.ssa.gov/accessibility/andi/help/install.html",
+            type: "testing"
+        },
+        {
+            title: "Eric Eggert",
+            description: "Eric is an outspoken a11y advocate and an excellent resource for technical accessibility information or disability inclusion. ",
+            link:"https://yatil.net/",
+            type: "community"
         }
     ]
 })
 }}
 
-
+</section>
 
