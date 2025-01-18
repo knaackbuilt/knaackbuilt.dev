@@ -1,0 +1,43 @@
+<div id="quote" class="mb-4 border-b-2 border-gray-600"></div>
+<script>
+    (function() {
+      var quotes = [
+        {
+          text: "I like building simple things that real humans can use."
+        },
+        {
+          text: "Websites aren't that hard. Stop making them hard."
+        },
+        {
+          text: "Managers should still be developers."
+        },
+        {
+          text: "Accessible design is usable design."
+        },
+        {
+          text: "Do the best work for the greatest good."
+        },
+        {
+          text: "This is a random quote on each reload."
+        },
+        {
+          text: "Always advocate for the user first."
+        },
+        {
+          text: "Try actually reading the WCAG standards before you enforce them."
+        },
+        {
+          text: "Enforce coding standards, don't just pass the buck."
+        },
+        {
+          text: "This site has no navigation menu, use the back button or click the site title."
+        },
+        {
+          text: "If you celebrated the 2024 election, you have no place here. Hate is not welcome."
+        }
+      ];
+      var quote = quotes[Math.floor(Math.random() * quotes.length)];
+      document.getElementById("quote").innerHTML =
+        '<p class="font-espy">' + quote.text + '</p>';
+    })();
+  </script>
