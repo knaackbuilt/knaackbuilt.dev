@@ -2,13 +2,13 @@
 layout: layout.njk
 title: Knaackbuilt.dev
 ---
-{% from './_includes/_components.njk' import topic, taglist  %}
+{% from './_includes/_components.njk' import topic, taglist, shakespeare  %}
 {{ topic({
     title:"Things I might write about",
     topics:[
         {
             title:"iBook G3's and G4's",
-            text:"I have a series of iBook G3 and G4's that I tinker with constantly. I'm going to write some useless blog posts for people about them.",
+            text:"I have a series of iBook G3 and G4's that I tinker with constantly.",
             link:"/ibook"
         },
         {
@@ -19,6 +19,8 @@ title: Knaackbuilt.dev
     ]
 
 })}}
+
+
 
 {{ topic({
     title:"Just the facts",
@@ -48,4 +50,7 @@ title: Knaackbuilt.dev
         }
     ]
 
+})}}
+
+{{ shakespeare({
 })}}
