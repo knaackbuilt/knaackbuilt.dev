@@ -3,6 +3,8 @@ layout: layout.njk
 title: Personal Website of Jeffrey Knaack
 ---
 {% from './_includes/_components.njk' import topic, taglist, shakespeare  %}
+
+
 {{ topic({
     title:"Things I might write about",
     topics:[
@@ -47,6 +49,9 @@ title: Personal Website of Jeffrey Knaack
 
 })}}
 
+{{ shakespeare({
+})}}
+
 
 <section class="flex flex-col items-center">
     <h2 class="font-bold"> Look at these terrible color combinations I'll use on this site! </h2>
@@ -72,5 +77,10 @@ title: Personal Website of Jeffrey Knaack
 
 </section>
 
-{{ shakespeare({
-})}}
+<p> Things I should build here
+<ul class="mx-8 my-2">
+    <li class="list-disc">I am currently widget</li>
+    <li class="list-disc">AOL away message feature with angsty song lyrics</li>
+</ul>
+</p>
+

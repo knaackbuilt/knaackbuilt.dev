@@ -1,6 +1,6 @@
 a:focus {
     outline: 4px solid #777;
-    outline-offset: 1px;
+    outline-offset: 2px;
     outline-style:groove;
 }
 a:hover {
@@ -18,13 +18,4 @@ a:hover {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'espysans', 'sans-serif';
-}
-
-.work > a {
-    border-bottom: 2px solid black;
-    margin-bottom: -2px;
-}
-
-.work .active {
-    background-color: yellow;
 }
