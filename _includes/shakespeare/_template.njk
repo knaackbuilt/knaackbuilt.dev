@@ -3,7 +3,7 @@
   class="p-4 font-espy font-bold bg-gray-200 border-2 border-gray-800 border-solid hover:bg-gray-800 hover:text-white focus:bg-gray-800 focus:text-white"> 
   Get Insulted By Shakespeare 
   </button>
-  <div id="insult" class="m-8 bg-yellow-200"></div>
+  <div id="insult" class="m-8 bg-yellow-900"></div>
   <script>
       const lolz = document.getElementById('haveFun');
       function insultMe() {
@@ -20,7 +20,7 @@
         ];
         var insult = insults[Math.floor(Math.random() * insults.length)];
         document.getElementById("insult").innerHTML =
-          '<p class="font-espy p-8 text-2xl ">' + insult.text + '<br>' + '<span class="font-espy text-sm">' + insult.play + '</span>' + '</p>';
+          '<p class="font-espy p-8 text-2xl text-lime-400 ">' + insult.text + '<br>' + '<span class="font-espy text-sm">' + insult.play + '</span>' + '</p>';
       }
       lolz.addEventListener('click', insultMe)
 
