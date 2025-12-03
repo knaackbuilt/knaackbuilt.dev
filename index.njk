@@ -1,6 +1,6 @@
 ---
 layout: layout.njk
-title: Knaackbuilt.dev
+title: Personal Website of Jeffrey Knaack
 ---
 {% from './_includes/_components.njk' import topic, taglist, shakespeare  %}
 {{ topic({
@@ -29,11 +29,6 @@ title: Knaackbuilt.dev
             title:"Resume",
             text:"default way to show I technically 'work'",
             link: "/resume"
-        },
-        {
-            title:"Things I've contributed to",
-            text:"list of projects",
-            link: "/contrib"
         }
     ]
 
@@ -51,6 +46,31 @@ title: Knaackbuilt.dev
     ]
 
 })}}
+
+
+<section class="flex flex-col items-center">
+    <h2 class="font-bold"> Look at these terrible color combinations I'll use on this site! </h2>
+    <p class="sr-only"> What follows here are three sets of three colors each (9 total colors) that looks terrible together. They clash. They create dissonance.
+        They include browns, yellows, lime, indigo, purple, rose and dark blue. This looks like the 1980s vomited on the page. </p>
+ <div class="flex m-4">
+    <div class="bg-amber-300 w-20 h-10"> </div>
+    <div class="bg-violet-500 w-20 h-10"> </div>
+    <div class="bg-orange-900 w-20 h-10"> </div>
+</div>
+
+<div class="flex m-4">
+    <div class="bg-yellow-900 w-20 h-10"> </div>
+    <div class="bg-lime-400 w-20 h-10"> </div>
+    <div class="bg-indigo-500 w-20 h-10"> </div>
+</div> 
+
+<div class="flex m-4">
+    <div class="bg-fuchsia-600 w-20 h-10"> </div>
+    <div class="bg-rose-400 w-20 h-10"> </div>
+    <div class="bg-sky-900 w-20 h-10"> </div>
+</div>
+
+</section>
 
 {{ shakespeare({
 })}}

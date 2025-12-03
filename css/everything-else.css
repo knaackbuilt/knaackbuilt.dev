@@ -1,15 +1,19 @@
 a:focus {
-    outline: 7px solid #777;
+    outline: 4px solid #777;
     outline-offset: 1px;
     outline-style:groove;
 }
 a:hover {
-    outline: 7px solid #777;
+    outline: 3px solid #777;
     outline-offset: 1px;
     outline-style:groove;
 }
 .font-espy {
     font-family: 'espysans', 'sans-serif';
+}
+
+.font-mukta {
+    font-family: 'mukta', 'sans-serif';
 }
 
 h1, h2, h3, h4, h5, h6 {

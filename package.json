@@ -7,7 +7,7 @@
     "tailwindcss": "^3.0.24"
   },
   "name": "knaackbuilt.dev",
-  "description": "This is my personal website",
+  "description": "This is my personal website. Come and see how little time I have outside of work to make it look nice.",
   "version": "1.0.0",
   "main": ".eleventy.js",
   "scripts": {

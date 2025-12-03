@@ -1,8 +1,85 @@
 ---
 layout: layout.njk
-title: Knaackbuilt.dev
+title: Resume
 ---
- {% from './_includes/_components.njk' import topic, randomizer  %}
+ {% from './_includes/_components.njk' import topic, randomizer, taglist  %}
+
+<h1 class="text-2xl font-bold text-center"> Resume and Work of Jeffrey H.S. Knaack </h1>
 
 
-<p> Hey nothing here yet! </p>
+
+<p class=""> Testing this font I can't remember what it looks like </p>
+
+
+<section class="" x-data="{
+    product: 'false', 
+    frontend: 'false', 
+    content: 'false', 
+    fullstack:'false',
+    all: 'false'}">    
+<h2 class=" uppercase font-bold py-2 md:text-center">Project Contributions</h2>
+    <div class="">
+        <ul class="flex flex-col">
+            <li>    
+                <label for="frontend" class=" ">Front-end Development</label>
+                <input @click="frontend = ! frontend"
+                type="checkbox" id="frontend" class="border border-black rounded">
+            </li>
+            <li>
+                <label for="fullstack" class=" ">Full-stack Development</label>
+                <input @click="fullstack = ! fullstack"
+                type="checkbox" id="fullstack" class="border border-black rounded">
+            </li>
+            <li>
+                <label for="product" class=" ">Product Management</label>
+                <input @click="product = ! product"
+                type="checkbox" id="product" class="border border-black rounded">
+            </li>
+            <li>
+                <label for="content" class=" ">Content Management</label>
+                <input @click="content = ! content"
+                type="checkbox" id="content" class="border border-black rounded">
+            </li>
+            <li>
+                <label for="all" class=" ">Don't want to bother with clicking each one and want to see it all?</label>
+                <input @click="alert('It is totally broken. I use alpinejs to write simple js without repeating common patterns and Im pretty much dumb with this one and couldnt in 10 seconds get it to highlight all. Ill have to revisit and fix properly')"
+                type="checkbox" id="all" class="border border-black rounded">
+            </li>
+        </ul>
+    </div>
+{{ taglist({
+    listType: "contrib",
+    tags:[
+        {
+            title: "The Official Website of the State of New York - ny.gov",
+            frontend: "yep",
+            frontdef:"Twig templating, svelte component development, sass, general css and html, presentational javascript, various drupalings",
+            product: "yep",
+            productdef: "",
+            content: "yes",
+            contentdef:"",
+            link:"https://ny.gov"
+        },
+        {
+            title:"The Official Website of the Governor State of New York - governor.ny.gov",
+            frontend: "yep",
+            product: "yep",
+            content: "yes",
+            link:"https://governor.ny.gov"
+        },
+        {
+            title:"Office of General Services - ogs.ny.gov",
+            product: "yep",
+            content: "yep",
+            link:"https://ogs.ny.gov"
+        },
+        {
+            title:"NYS Digital Services Utilities - nysds.dev",
+            fullstack: "yep",
+            content: "yessir",
+            link:"https://nysds.dev"
+        }
+    ]
+})
+}}
+</section>

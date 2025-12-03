@@ -11,7 +11,7 @@
 <link href="/css/everything-else.css" rel="stylesheet">
 
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <title>Knaackbuilt.dev</title>
+    <title>Resume</title>
   </head>
   <body class="m-8 flex flex-col items-center">
   <a href="#main-site-content-for-skiplink" class="sr-only focus:not-sr-only text-blue-700 underline font-2xl">Skip to Main Content</a>
@@ -63,9 +63,164 @@
   </script>
      
 
+<h1 class="text-2xl font-bold text-center"> Resume and Work of Jeffrey H.S. Knaack </h1>
 
-<p> Hey nothing here yet! </p>
 
+
+<p class=""> Testing this font I can't remember what it looks like </p>
+
+
+<section class="" x-data="{
+    product: 'false', 
+    frontend: 'false', 
+    content: 'false', 
+    fullstack:'false',
+    all: 'false'}">    
+<h2 class=" uppercase font-bold py-2 md:text-center">Project Contributions</h2>
+    <div class="">
+        <ul class="flex flex-col">
+            <li>    
+                <label for="frontend" class=" ">Front-end Development</label>
+                <input @click="frontend = ! frontend"
+                type="checkbox" id="frontend" class="border border-black rounded">
+            </li>
+            <li>
+                <label for="fullstack" class=" ">Full-stack Development</label>
+                <input @click="fullstack = ! fullstack"
+                type="checkbox" id="fullstack" class="border border-black rounded">
+            </li>
+            <li>
+                <label for="product" class=" ">Product Management</label>
+                <input @click="product = ! product"
+                type="checkbox" id="product" class="border border-black rounded">
+            </li>
+            <li>
+                <label for="content" class=" ">Content Management</label>
+                <input @click="content = ! content"
+                type="checkbox" id="content" class="border border-black rounded">
+            </li>
+            <li>
+                <label for="all" class=" ">Don't want to bother with clicking each one and want to see it all?</label>
+                <input @click="alert('It is totally broken. I use alpinejs to write simple js without repeating common patterns and Im pretty much dumb with this one and couldnt in 10 seconds get it to highlight all. Ill have to revisit and fix properly')"
+                type="checkbox" id="all" class="border border-black rounded">
+            </li>
+        </ul>
+    </div>
+
+
+    <ul class="">
+        
+            <li class="my-3 flex flex-col bg-orange-200 p-4 border border-dashed border-black" >
+                <div class="">
+                    <a href="https://ny.gov" class="flex items-center underline text-blue-900">
+                        The Official Website of the State of New York - ny.gov
+                    </a>
+                </div>  
+                <div class="mb-2">
+                    
+                    <span class="first-of-type:ml-0 ml-4 p-1 text-xs  bg-blue-100 whitespace-nowrap" :class="frontend ? '' : 'bg-yellow-400'">front-end</span>
+                    <template x-if="!frontend">
+                        <p> highlights include: Twig templating, svelte component development, sass, general css and html, presentational javascript, various drupalings </p>
+                    </template>
+                    
+                    
+                    
+                    <span class="first-of-type:ml-0 ml-4 p-1 text-xs  bg-blue-100 whitespace-nowrap" :class="product ? '' : 'bg-yellow-400'">product</span>
+                    <template x-if="!product">
+                        <p> highlights include:  </p>
+                    </template>
+                    
+                    
+                    <span class="first-of-type:ml-0 ml-4 p-1 text-xs  bg-blue-100 whitespace-nowrap" :class="content ? '' : 'bg-yellow-400'">content</span>
+                    <template x-if="!content">
+                        <p> highlights include:  </p>
+                    </template>
+                    
+                </div>
+            </li>
+        
+            <li class="my-3 flex flex-col bg-orange-200 p-4 border border-dashed border-black" >
+                <div class="">
+                    <a href="https://governor.ny.gov" class="flex items-center underline text-blue-900">
+                        The Official Website of the Governor State of New York - governor.ny.gov
+                    </a>
+                </div>  
+                <div class="mb-2">
+                    
+                    <span class="first-of-type:ml-0 ml-4 p-1 text-xs  bg-blue-100 whitespace-nowrap" :class="frontend ? '' : 'bg-yellow-400'">front-end</span>
+                    <template x-if="!frontend">
+                        <p> highlights include:  </p>
+                    </template>
+                    
+                    
+                    
+                    <span class="first-of-type:ml-0 ml-4 p-1 text-xs  bg-blue-100 whitespace-nowrap" :class="product ? '' : 'bg-yellow-400'">product</span>
+                    <template x-if="!product">
+                        <p> highlights include:  </p>
+                    </template>
+                    
+                    
+                    <span class="first-of-type:ml-0 ml-4 p-1 text-xs  bg-blue-100 whitespace-nowrap" :class="content ? '' : 'bg-yellow-400'">content</span>
+                    <template x-if="!content">
+                        <p> highlights include:  </p>
+                    </template>
+                    
+                </div>
+            </li>
+        
+            <li class="my-3 flex flex-col bg-orange-200 p-4 border border-dashed border-black" >
+                <div class="">
+                    <a href="https://ogs.ny.gov" class="flex items-center underline text-blue-900">
+                        Office of General Services - ogs.ny.gov
+                    </a>
+                </div>  
+                <div class="mb-2">
+                    
+                    
+                    
+                    <span class="first-of-type:ml-0 ml-4 p-1 text-xs  bg-blue-100 whitespace-nowrap" :class="product ? '' : 'bg-yellow-400'">product</span>
+                    <template x-if="!product">
+                        <p> highlights include:  </p>
+                    </template>
+                    
+                    
+                    <span class="first-of-type:ml-0 ml-4 p-1 text-xs  bg-blue-100 whitespace-nowrap" :class="content ? '' : 'bg-yellow-400'">content</span>
+                    <template x-if="!content">
+                        <p> highlights include:  </p>
+                    </template>
+                    
+                </div>
+            </li>
+        
+            <li class="my-3 flex flex-col bg-orange-200 p-4 border border-dashed border-black" >
+                <div class="">
+                    <a href="https://nysds.dev" class="flex items-center underline text-blue-900">
+                        NYS Digital Services Utilities - nysds.dev
+                    </a>
+                </div>  
+                <div class="mb-2">
+                    
+                    
+                    <span class="first-of-type:ml-0 ml-4 p-1 text-xs  bg-blue-100 whitespace-nowrap" :class="fullstack ? '' : 'bg-yellow-400'">full stack</span>
+                    <template x-if="!fullstack">
+                        <p> highlights include:  </p>
+                    </template>
+                    
+                    
+                    
+                    <span class="first-of-type:ml-0 ml-4 p-1 text-xs  bg-blue-100 whitespace-nowrap" :class="content ? '' : 'bg-yellow-400'">content</span>
+                    <template x-if="!content">
+                        <p> highlights include:  </p>
+                    </template>
+                    
+                </div>
+            </li>
+        
+    </ul>
+
+
+
+</section>
     <footer class="font-espy mt-12 flex flex-col md:flex-row items-center border-t-2 pt-2 border-gray-400">
       <p class="flex text-xs py-2"> I'm building this site in the open and never have much time, so stuff is constantly broken and incomplete. </p>
       <ul class="flex flex-col sm:flex-row md:ml-auto">
