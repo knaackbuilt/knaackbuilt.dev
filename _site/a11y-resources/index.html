@@ -22,7 +22,7 @@
     
     <main class="min-h-screen w-full lg:w-3/4" id="main-site-content-for-skiplink">
     <h1 class="text-3xl font-bold py-4"><a href="/">Knaackbuilt.dev</a></h1>
-    <div id="quote" class="mb-4 border-b-2 border-gray-600"></div>
+    <div id="quote" class="mb-4 border-b-2 border-gray-600"> <span class="sr-only">This is a random quote on each page load</span></div>
 <script>
     (function() {
       var quotes = [
@@ -80,21 +80,22 @@
       ];
       var quote = quotes[Math.floor(Math.random() * quotes.length)];
       document.getElementById("quote").innerHTML =
-        '<p class="font-espy">' + quote.text + '</p>';
+        '<p class="space-mono-regular">' + quote.text + '</p>';
     })();
   </script>
+
      
 
 
 <section class="" x-data="{
-    standard: 'false', 
-    consultant: 'false', 
-    community: 'false', 
-    testing:'false'}">    
+    standard: 'false',
+    consultant: 'false',
+    community: 'false',
+    testing:'false'}">
 <h2 class=" uppercase font-bold py-2 md:text-center">Accessibility Resources</h2>
     <div class="border p-4">
         <ul class="flex flex-col">
-            <li>    
+            <li>
                 <label for="standard" class="font-espy text-sm">Accessibility Standard</label>
                 <input @click="standard = ! standard"
                 type="checkbox" id="standard" class="border border-black rounded">
@@ -201,7 +202,6 @@
 
 
 </section>
-
 
     <footer class="space-mono-regular mt-12 flex flex-col md:flex-row items-center border-t-2 pt-2 border-gray-400">
       <p class="flex text-xs py-2"> I'm building this site in the open and never have much time, so stuff is constantly broken and incomplete. </p>

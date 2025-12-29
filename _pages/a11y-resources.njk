@@ -1,19 +1,20 @@
 ---
 layout: layout.njk
 title: Knaackbuilt.dev
+permalink: "a11y-resources/"
 ---
- {% from './_includes/_components.njk' import topic, randomizer, taglist  %}
+ {% from '../_includes/_components.njk' import topic, randomizer, taglist  %}
 
 
 <section class="" x-data="{
-    standard: 'false', 
-    consultant: 'false', 
-    community: 'false', 
-    testing:'false'}">    
+    standard: 'false',
+    consultant: 'false',
+    community: 'false',
+    testing:'false'}">
 <h2 class=" uppercase font-bold py-2 md:text-center">Accessibility Resources</h2>
     <div class="border p-4">
         <ul class="flex flex-col">
-            <li>    
+            <li>
                 <label for="standard" class="font-espy text-sm">Accessibility Standard</label>
                 <input @click="standard = ! standard"
                 type="checkbox" id="standard" class="border border-black rounded">
@@ -72,4 +73,3 @@ title: Knaackbuilt.dev
 }}
 
 </section>
-

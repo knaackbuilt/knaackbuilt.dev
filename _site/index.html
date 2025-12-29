@@ -22,7 +22,7 @@
     
     <main class="min-h-screen w-full lg:w-3/4" id="main-site-content-for-skiplink">
     <h1 class="text-3xl font-bold py-4"><a href="/">Knaackbuilt.dev</a></h1>
-    <div id="quote" class="mb-4 border-b-2 border-gray-600"></div>
+    <div id="quote" class="mb-4 border-b-2 border-gray-600"> <span class="sr-only">This is a random quote on each page load</span></div>
 <script>
     (function() {
       var quotes = [
@@ -80,9 +80,10 @@
       ];
       var quote = quotes[Math.floor(Math.random() * quotes.length)];
       document.getElementById("quote").innerHTML =
-        '<p class="font-espy">' + quote.text + '</p>';
+        '<p class="space-mono-regular">' + quote.text + '</p>';
     })();
   </script>
+
     
 
 
