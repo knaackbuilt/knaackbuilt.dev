@@ -2,7 +2,7 @@
 {% if params.listType == 'contrib'%}
 
   {% for tag in params.tags %}
-    <details class="">
+    <details class="" :open="!expandAll" >
       <summary class="focus:outline-rose-400 focus:outline-4 focus:outline hover:outline hover:outline-4 hover:outline-rose-400 p-4 font-bold border border-solid border-rose-400 text-sky-900">
         {{tag.title}}
       </summary>

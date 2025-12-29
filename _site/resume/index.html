@@ -5,10 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="a personal website where I can never get tired of html">
     <meta name="generator" content="11ty/eleventy">
-    
+
     <link href="/css/tailwind.css" rel="stylesheet">
 <link href="/css/fonts.css" rel="stylesheet">
 <link href="/css/everything-else.css" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <title>Resume</title>
@@ -88,47 +92,22 @@
 <p class=""> Testing this font I can't remember what it looks like </p>
 
 
-<section class="flex flex-col gap-3" x-data="{
-    product: 'false',
-    frontend: 'false',
-    content: 'false',
-    fullstack:'false',
-    all: 'false'}">
+<section class="flex flex-col gap-3"
+          x-data="{
+                    expandAll: 'false'}">
 <h2 class=" uppercase font-bold py-2 md:text-center">Project Contributions</h2>
-    <div class="">
-        <ul class="flex flex-col">
-            <li>
-                <label for="frontend" class=" ">Front-end Development</label>
-                <input @click="frontend = ! frontend"
-                type="checkbox" id="frontend" class="border border-black rounded">
-            </li>
-            <li>
-                <label for="fullstack" class=" ">Full-stack Development</label>
-                <input @click="fullstack = ! fullstack"
-                type="checkbox" id="fullstack" class="border border-black rounded">
-            </li>
-            <li>
-                <label for="product" class=" ">Product Management</label>
-                <input @click="product = ! product"
-                type="checkbox" id="product" class="border border-black rounded">
-            </li>
-            <li>
-                <label for="content" class=" ">Content Management</label>
-                <input @click="content = ! content"
-                type="checkbox" id="content" class="border border-black rounded">
-            </li>
-            <li>
-                <label for="all" class=" ">Don't want to bother with clicking each one and want to see it all?</label>
-                <input @click="alert('It is totally broken. I use alpinejs to write simple js without repeating common patterns and Im pretty much dumb with this one and couldnt in 10 seconds get it to highlight all. Ill have to revisit and fix properly')"
-                type="checkbox" id="all" class="border border-black rounded">
-            </li>
-        </ul>
+    <div class="flex items-center">
+
+                <input @click="expandAll = ! expandAll"
+                type="checkbox" id="expandAll" class="border border-black rounded h-8 w-8">
+                <label for="expandAll" class="text-xl mx-2">Expand All the Things</label>
     </div>
 
 
 
+
   
-    <details class="">
+    <details class="" :open="!expandAll" >
       <summary class="focus:outline-rose-400 focus:outline-4 focus:outline hover:outline hover:outline-4 hover:outline-rose-400 p-4 font-bold border border-solid border-rose-400 text-sky-900">
         The Official Website of the State of New York - ny.gov
       </summary>
@@ -137,7 +116,7 @@
       </span>
     </details>
   
-    <details class="">
+    <details class="" :open="!expandAll" >
       <summary class="focus:outline-rose-400 focus:outline-4 focus:outline hover:outline hover:outline-4 hover:outline-rose-400 p-4 font-bold border border-solid border-rose-400 text-sky-900">
         The Official Website of the Governor State of New York - governor.ny.gov
       </summary>
@@ -146,7 +125,7 @@
       </span>
     </details>
   
-    <details class="">
+    <details class="" :open="!expandAll" >
       <summary class="focus:outline-rose-400 focus:outline-4 focus:outline hover:outline hover:outline-4 hover:outline-rose-400 p-4 font-bold border border-solid border-rose-400 text-sky-900">
         Office of General Services - ogs.ny.gov
       </summary>
@@ -155,7 +134,7 @@
       </span>
     </details>
   
-    <details class="">
+    <details class="" :open="!expandAll" >
       <summary class="focus:outline-rose-400 focus:outline-4 focus:outline hover:outline hover:outline-4 hover:outline-rose-400 p-4 font-bold border border-solid border-rose-400 text-sky-900">
         NYS Digital Services Utilities - nysds.dev
       </summary>
@@ -176,7 +155,7 @@
 
 </section>
 
-    <footer class="font-espy mt-12 flex flex-col md:flex-row items-center border-t-2 pt-2 border-gray-400">
+    <footer class="space-mono-regular mt-12 flex flex-col md:flex-row items-center border-t-2 pt-2 border-gray-400">
       <p class="flex text-xs py-2"> I'm building this site in the open and never have much time, so stuff is constantly broken and incomplete. </p>
       <ul class="flex flex-col sm:flex-row md:ml-auto">
         <li class="sm:mx-2 py-2"><a href="/sitemap.xml" class="font-bold text-xs"> XML Sitemap </a></li>
@@ -186,6 +165,6 @@
       </ul>
       </footer>
     </main>
-   
+
   </body>
 </html>

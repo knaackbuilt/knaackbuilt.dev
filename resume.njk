@@ -11,49 +11,25 @@ title: Resume
 <p class=""> Testing this font I can't remember what it looks like </p>
 
 
-<section class="flex flex-col gap-3" x-data="{
-    product: 'false',
-    frontend: 'false',
-    content: 'false',
-    fullstack:'false',
-    all: 'false'}">
+<section class="flex flex-col gap-3"
+          x-data="{
+                    expandAll: 'false'}">
 <h2 class=" uppercase font-bold py-2 md:text-center">Project Contributions</h2>
-    <div class="">
-        <ul class="flex flex-col">
-            <li>
-                <label for="frontend" class=" ">Front-end Development</label>
-                <input @click="frontend = ! frontend"
-                type="checkbox" id="frontend" class="border border-black rounded">
-            </li>
-            <li>
-                <label for="fullstack" class=" ">Full-stack Development</label>
-                <input @click="fullstack = ! fullstack"
-                type="checkbox" id="fullstack" class="border border-black rounded">
-            </li>
-            <li>
-                <label for="product" class=" ">Product Management</label>
-                <input @click="product = ! product"
-                type="checkbox" id="product" class="border border-black rounded">
-            </li>
-            <li>
-                <label for="content" class=" ">Content Management</label>
-                <input @click="content = ! content"
-                type="checkbox" id="content" class="border border-black rounded">
-            </li>
-            <li>
-                <label for="all" class=" ">Don't want to bother with clicking each one and want to see it all?</label>
-                <input @click="alert('It is totally broken. I use alpinejs to write simple js without repeating common patterns and Im pretty much dumb with this one and couldnt in 10 seconds get it to highlight all. Ill have to revisit and fix properly')"
-                type="checkbox" id="all" class="border border-black rounded">
-            </li>
-        </ul>
+    <div class="flex items-center">
+
+                <input @click="expandAll = ! expandAll"
+                type="checkbox" id="expandAll" class="border border-black rounded h-8 w-8">
+                <label for="expandAll" class="text-xl mx-2">Expand All the Things</label>
     </div>
+
 {{ taglist({
     listType: "contrib",
     tags:[
         {
             title: "The Official Website of the State of New York - ny.gov",
             content:"Twig templating, svelte component development, sass, general css and html, presentational javascript, various drupalings",
-            link:"https://ny.gov"
+            link:"https://ny.gov",
+            type:"frontend"
         },
         {
             title:"The Official Website of the Governor State of New York - governor.ny.gov",
