@@ -5,11 +5,12 @@ permalink: "resume/"
 ---
  {% from '../_includes/_components.njk' import topic, randomizer, taglist  %}
 
-<h1 class="text-2xl font-bold text-center"> Resume and Work of Jeffrey H.S. Knaack </h1>
+<h1 class="text-2xl font-bold text-center my-4"> Resume and Work of Jeffrey H.S. Knaack </h1>
 
 
+<h2 class="uppercase font-bold py-2 md:text-center"> Statement </h2>
 
-<p class=""> Testing this font I can't remember what it looks like </p>
+<p class="mb-4"> I am a technologist, developer, educator and leader who wants to build things that real people can use. As a dedicated public servant, I have spent the last 15 years improving the experiences of users interacting with government websites and services. I want to continue creating accessible, performant, and useful digital tools for public use. </p>
 
 
 <section class="flex flex-col gap-3"
@@ -24,32 +25,22 @@ permalink: "resume/"
     </div>
 
 {{ taglist({
-    listType: "contrib",
+    listType: "resumeSection",
     tags:[
         {
             title: "The Official Website of the State of New York - ny.gov",
+            shortTitle:"NY.gov website",
             content:"Twig templating, svelte component development, sass, general css and html, presentational javascript, various drupalings",
             link:"https://ny.gov",
             type:"frontend"
         },
         {
-            title:"The Official Website of the Governor State of New York - governor.ny.gov",
+            title:"The Official Website of the Governor of the State of New York - governor.ny.gov",
+            shortTitle:"Governor.ny.gov website",
             frontend: "yep",
             product: "yep",
             content: "yes",
             link:"https://governor.ny.gov"
-        },
-        {
-            title:"Office of General Services - ogs.ny.gov",
-            product: "yep",
-            content: "yep",
-            link:"https://ogs.ny.gov"
-        },
-        {
-            title:"NYS Digital Services Utilities - nysds.dev",
-            fullstack: "yep",
-            content: "yessir",
-            link:"https://nysds.dev"
         }
     ]
 })
