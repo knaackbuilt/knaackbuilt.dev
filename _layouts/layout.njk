@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="a personal website where I can never get tired of html">
     <meta name="generator" content="11ty/eleventy">
-    
+
     {% include '_css-link.njk' %}
     {% include '_js-link.njk' %}
     <title>{{ title }}</title>
@@ -17,7 +17,7 @@
     <h1 class="text-3xl font-bold py-4"><a href="/">Knaackbuilt.dev</a></h1>
     {{ randomizer({})}}
     {{ content | safe }}
-    <footer class="font-espy mt-12 flex flex-col md:flex-row items-center border-t-2 pt-2 border-gray-400">
+    <footer class="space-mono-regular mt-12 flex flex-col md:flex-row items-center border-t-2 pt-2 border-gray-400">
       <p class="flex text-xs py-2"> I'm building this site in the open and never have much time, so stuff is constantly broken and incomplete. </p>
       <ul class="flex flex-col sm:flex-row md:ml-auto">
         <li class="sm:mx-2 py-2"><a href="/sitemap.xml" class="font-bold text-xs"> XML Sitemap </a></li>
@@ -27,6 +27,6 @@
       </ul>
       </footer>
     </main>
-   
+
   </body>
 </html>

@@ -5,10 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="a personal website where I can never get tired of html">
     <meta name="generator" content="11ty/eleventy">
-    
+
     <link href="/css/tailwind.css" rel="stylesheet">
 <link href="/css/fonts.css" rel="stylesheet">
 <link href="/css/everything-else.css" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <title>Knaackbuilt.dev</title>
@@ -18,7 +22,7 @@
     
     <main class="min-h-screen w-full lg:w-3/4" id="main-site-content-for-skiplink">
     <h1 class="text-3xl font-bold py-4"><a href="/">Knaackbuilt.dev</a></h1>
-    <div id="quote" class="mb-4 border-b-2 border-gray-600"></div>
+    <div id="quote" class="mb-4 border-b-2 border-gray-600"> <span class="sr-only">This is a random quote on each page load</span></div>
 <script>
     (function() {
       var quotes = [
@@ -76,21 +80,22 @@
       ];
       var quote = quotes[Math.floor(Math.random() * quotes.length)];
       document.getElementById("quote").innerHTML =
-        '<p class="font-espy">' + quote.text + '</p>';
+        '<p class="space-mono-regular">' + quote.text + '</p>';
     })();
   </script>
+
      
 
 
 <section class="" x-data="{
-    standard: 'false', 
-    consultant: 'false', 
-    community: 'false', 
-    testing:'false'}">    
+    standard: 'false',
+    consultant: 'false',
+    community: 'false',
+    testing:'false'}">
 <h2 class=" uppercase font-bold py-2 md:text-center">Accessibility Resources</h2>
     <div class="border p-4">
         <ul class="flex flex-col">
-            <li>    
+            <li>
                 <label for="standard" class="font-espy text-sm">Accessibility Standard</label>
                 <input @click="standard = ! standard"
                 type="checkbox" id="standard" class="border border-black rounded">
@@ -136,7 +141,7 @@
                     <p>
                         This is the standard setting body (w3c) and the official recommendation that gets adopted by various organizations.
                     </p>
-                </div>  
+                </div>
                 
             </li>
         
@@ -153,7 +158,7 @@
                     <p>
                         Section 508 of the rehabilitation act is where we get federal conformance regulation from. 
                     </p>
-                </div>  
+                </div>
                 
             </li>
         
@@ -170,7 +175,7 @@
                     <p>
                         ANDI is a fnastastic tool for manual inspection of accessible names and properties of DOM elements. 
                     </p>
-                </div>  
+                </div>
                 
             </li>
         
@@ -187,7 +192,7 @@
                     <p>
                         Eric is an outspoken a11y advocate and an excellent resource for technical accessibility information or disability inclusion. 
                     </p>
-                </div>  
+                </div>
                 
             </li>
         
@@ -195,10 +200,10 @@
 
 
 
+
 </section>
 
-
-    <footer class="font-espy mt-12 flex flex-col md:flex-row items-center border-t-2 pt-2 border-gray-400">
+    <footer class="space-mono-regular mt-12 flex flex-col md:flex-row items-center border-t-2 pt-2 border-gray-400">
       <p class="flex text-xs py-2"> I'm building this site in the open and never have much time, so stuff is constantly broken and incomplete. </p>
       <ul class="flex flex-col sm:flex-row md:ml-auto">
         <li class="sm:mx-2 py-2"><a href="/sitemap.xml" class="font-bold text-xs"> XML Sitemap </a></li>
@@ -208,6 +213,6 @@
       </ul>
       </footer>
     </main>
-   
+
   </body>
 </html>

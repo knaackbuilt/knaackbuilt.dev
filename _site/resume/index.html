@@ -5,10 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="a personal website where I can never get tired of html">
     <meta name="generator" content="11ty/eleventy">
-    
+
     <link href="/css/tailwind.css" rel="stylesheet">
 <link href="/css/fonts.css" rel="stylesheet">
 <link href="/css/everything-else.css" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <title>Resume</title>
@@ -18,7 +22,7 @@
     
     <main class="min-h-screen w-full lg:w-3/4" id="main-site-content-for-skiplink">
     <h1 class="text-3xl font-bold py-4"><a href="/">Knaackbuilt.dev</a></h1>
-    <div id="quote" class="mb-4 border-b-2 border-gray-600"></div>
+    <div id="quote" class="mb-4 border-b-2 border-gray-600"> <span class="sr-only">This is a random quote on each page load</span></div>
 <script>
     (function() {
       var quotes = [
@@ -76,170 +80,75 @@
       ];
       var quote = quotes[Math.floor(Math.random() * quotes.length)];
       document.getElementById("quote").innerHTML =
-        '<p class="font-espy">' + quote.text + '</p>';
+        '<p class="space-mono-regular">' + quote.text + '</p>';
     })();
   </script>
+
      
 
-<h1 class="text-2xl font-bold text-center"> Resume and Work of Jeffrey H.S. Knaack </h1>
+<h1 class="text-2xl font-bold text-center my-4"> Resume and Work of Jeffrey H.S. Knaack </h1>
 
 
+<h2 class="uppercase font-bold py-2 md:text-center"> Statement </h2>
 
-<p class=""> Testing this font I can't remember what it looks like </p>
+<p class="mb-4"> I am a technologist, developer, educator and leader who wants to build things that real people can use. As a dedicated public servant, I have spent the last 15 years improving the experiences of users interacting with government websites and services. I want to continue creating accessible, performant, and useful digital tools for public use. </p>
 
 
-<section class="" x-data="{
-    product: 'false', 
-    frontend: 'false', 
-    content: 'false', 
-    fullstack:'false',
-    all: 'false'}">    
+<section class="flex flex-col gap-3"
+          x-data="{
+                    expandAll: 'false'}">
 <h2 class=" uppercase font-bold py-2 md:text-center">Project Contributions</h2>
-    <div class="">
-        <ul class="flex flex-col">
-            <li>    
-                <label for="frontend" class=" ">Front-end Development</label>
-                <input @click="frontend = ! frontend"
-                type="checkbox" id="frontend" class="border border-black rounded">
-            </li>
-            <li>
-                <label for="fullstack" class=" ">Full-stack Development</label>
-                <input @click="fullstack = ! fullstack"
-                type="checkbox" id="fullstack" class="border border-black rounded">
-            </li>
-            <li>
-                <label for="product" class=" ">Product Management</label>
-                <input @click="product = ! product"
-                type="checkbox" id="product" class="border border-black rounded">
-            </li>
-            <li>
-                <label for="content" class=" ">Content Management</label>
-                <input @click="content = ! content"
-                type="checkbox" id="content" class="border border-black rounded">
-            </li>
-            <li>
-                <label for="all" class=" ">Don't want to bother with clicking each one and want to see it all?</label>
-                <input @click="alert('It is totally broken. I use alpinejs to write simple js without repeating common patterns and Im pretty much dumb with this one and couldnt in 10 seconds get it to highlight all. Ill have to revisit and fix properly')"
-                type="checkbox" id="all" class="border border-black rounded">
-            </li>
-        </ul>
+    <div class="flex items-center">
+
+                <input @click="expandAll = ! expandAll"
+                type="checkbox" id="expandAll" class="border border-black rounded h-8 w-8">
+                <label for="expandAll" class="text-xl mx-2">Expand All the Things</label>
     </div>
 
 
-    <ul class="">
-        
-            <li class="my-3 flex flex-col bg-orange-200 p-4 border border-dashed border-black" >
-                <div class="">
-                    <a href="https://ny.gov" class="flex items-center underline text-blue-900">
-                        The Official Website of the State of New York - ny.gov
-                    </a>
-                </div>  
-                <div class="mb-2">
-                    
-                    <span class="first-of-type:ml-0 ml-4 p-1 text-xs  bg-blue-100 whitespace-nowrap" :class="frontend ? '' : 'bg-yellow-400'">front-end</span>
-                    <template x-if="!frontend">
-                        <p> highlights include: Twig templating, svelte component development, sass, general css and html, presentational javascript, various drupalings </p>
-                    </template>
-                    
-                    
-                    
-                    <span class="first-of-type:ml-0 ml-4 p-1 text-xs  bg-blue-100 whitespace-nowrap" :class="product ? '' : 'bg-yellow-400'">product</span>
-                    <template x-if="!product">
-                        <p> highlights include:  </p>
-                    </template>
-                    
-                    
-                    <span class="first-of-type:ml-0 ml-4 p-1 text-xs  bg-blue-100 whitespace-nowrap" :class="content ? '' : 'bg-yellow-400'">content</span>
-                    <template x-if="!content">
-                        <p> highlights include:  </p>
-                    </template>
-                    
-                </div>
-            </li>
-        
-            <li class="my-3 flex flex-col bg-orange-200 p-4 border border-dashed border-black" >
-                <div class="">
-                    <a href="https://governor.ny.gov" class="flex items-center underline text-blue-900">
-                        The Official Website of the Governor State of New York - governor.ny.gov
-                    </a>
-                </div>  
-                <div class="mb-2">
-                    
-                    <span class="first-of-type:ml-0 ml-4 p-1 text-xs  bg-blue-100 whitespace-nowrap" :class="frontend ? '' : 'bg-yellow-400'">front-end</span>
-                    <template x-if="!frontend">
-                        <p> highlights include:  </p>
-                    </template>
-                    
-                    
-                    
-                    <span class="first-of-type:ml-0 ml-4 p-1 text-xs  bg-blue-100 whitespace-nowrap" :class="product ? '' : 'bg-yellow-400'">product</span>
-                    <template x-if="!product">
-                        <p> highlights include:  </p>
-                    </template>
-                    
-                    
-                    <span class="first-of-type:ml-0 ml-4 p-1 text-xs  bg-blue-100 whitespace-nowrap" :class="content ? '' : 'bg-yellow-400'">content</span>
-                    <template x-if="!content">
-                        <p> highlights include:  </p>
-                    </template>
-                    
-                </div>
-            </li>
-        
-            <li class="my-3 flex flex-col bg-orange-200 p-4 border border-dashed border-black" >
-                <div class="">
-                    <a href="https://ogs.ny.gov" class="flex items-center underline text-blue-900">
-                        Office of General Services - ogs.ny.gov
-                    </a>
-                </div>  
-                <div class="mb-2">
-                    
-                    
-                    
-                    <span class="first-of-type:ml-0 ml-4 p-1 text-xs  bg-blue-100 whitespace-nowrap" :class="product ? '' : 'bg-yellow-400'">product</span>
-                    <template x-if="!product">
-                        <p> highlights include:  </p>
-                    </template>
-                    
-                    
-                    <span class="first-of-type:ml-0 ml-4 p-1 text-xs  bg-blue-100 whitespace-nowrap" :class="content ? '' : 'bg-yellow-400'">content</span>
-                    <template x-if="!content">
-                        <p> highlights include:  </p>
-                    </template>
-                    
-                </div>
-            </li>
-        
-            <li class="my-3 flex flex-col bg-orange-200 p-4 border border-dashed border-black" >
-                <div class="">
-                    <a href="https://nysds.dev" class="flex items-center underline text-blue-900">
-                        NYS Digital Services Utilities - nysds.dev
-                    </a>
-                </div>  
-                <div class="mb-2">
-                    
-                    
-                    <span class="first-of-type:ml-0 ml-4 p-1 text-xs  bg-blue-100 whitespace-nowrap" :class="fullstack ? '' : 'bg-yellow-400'">full stack</span>
-                    <template x-if="!fullstack">
-                        <p> highlights include:  </p>
-                    </template>
-                    
-                    
-                    
-                    <span class="first-of-type:ml-0 ml-4 p-1 text-xs  bg-blue-100 whitespace-nowrap" :class="content ? '' : 'bg-yellow-400'">content</span>
-                    <template x-if="!content">
-                        <p> highlights include:  </p>
-                    </template>
-                    
-                </div>
-            </li>
-        
-    </ul>
+
+<div class="flex flex-col border-2 border-dashed p-4 m-4">
+  
+    <details class="" :open="!expandAll" >
+      <summary class="focus:outline-rose-400 focus:outline-4 focus:outline hover:outline hover:outline-4 hover:outline-rose-400 p-4 font-bold border border-solid border-rose-400 text-sky-900">
+        The Official Website of the State of New York - ny.gov
+      </summary>
+      <p class="flex flex-col bg-gray-200 p-4 w-full">
+        Twig templating, svelte component development, sass, general css and html, presentational javascript, various drupalings
+        <a href="https://ny.gov" class="m-4 md:w-1/3 underline hover:decoration-4 focus:decoration-4">Link to the NY.gov website</a>
+      </p>
+
+
+    </details>
+
+  
+    <details class="" :open="!expandAll" >
+      <summary class="focus:outline-rose-400 focus:outline-4 focus:outline hover:outline hover:outline-4 hover:outline-rose-400 p-4 font-bold border border-solid border-rose-400 text-sky-900">
+        The Official Website of the Governor of the State of New York - governor.ny.gov
+      </summary>
+      <p class="flex flex-col bg-gray-200 p-4 w-full">
+        yes
+        <a href="https://governor.ny.gov" class="m-4 md:w-1/3 underline hover:decoration-4 focus:decoration-4">Link to the Governor.ny.gov website</a>
+      </p>
+
+
+    </details>
+
+  
+</div>
+
+
+
+
+
+
+
 
 
 
 </section>
-    <footer class="font-espy mt-12 flex flex-col md:flex-row items-center border-t-2 pt-2 border-gray-400">
+
+    <footer class="space-mono-regular mt-12 flex flex-col md:flex-row items-center border-t-2 pt-2 border-gray-400">
       <p class="flex text-xs py-2"> I'm building this site in the open and never have much time, so stuff is constantly broken and incomplete. </p>
       <ul class="flex flex-col sm:flex-row md:ml-auto">
         <li class="sm:mx-2 py-2"><a href="/sitemap.xml" class="font-bold text-xs"> XML Sitemap </a></li>
@@ -249,6 +158,6 @@
       </ul>
       </footer>
     </main>
-   
+
   </body>
 </html>
