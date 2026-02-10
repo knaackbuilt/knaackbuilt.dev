@@ -5,6 +5,10 @@ If you don't like utility-based css, sorry. I don't love it, but it's easier and
 
 Thanks for coming to my ted talk.
 
+## Using this repo on ubuntu linuxbook
+- nvm ls
+- nvm use 12.22.12
+- this install can use npm 8 and node 12 totally fine.
 
 ## Alpinejs explanations
 This is for me, but maybe also for you. All documentation examples are like: "ok so just invoke the secondary arrow directive object into the first tertiary  prop for importing and then when you declare scrogz you'll be all set to foo-bar the normal way as strong typing." No, I don't understand it. Yes I do understand programming.
