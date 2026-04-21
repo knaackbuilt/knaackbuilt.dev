@@ -1,0 +1,8 @@
+{% set markdownPath = params.content %}
+<section class="flex flex-col w-full mt-8">
+    <h2 class="uppercase font-bold"> {{params.title}}</h2>
+   <p> {{markdownPath}} </p>
+   {% include '../../_content/markdown-test.md'  %}
+
+
+</section>
