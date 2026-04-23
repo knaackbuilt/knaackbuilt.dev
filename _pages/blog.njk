@@ -1,0 +1,11 @@
+---
+layout: layout.njk
+title: Blog or Not
+permalink: "useless-ramblings/"
+---
+ {% from '../_includes/_components.njk' import topic, randomizer, taglist, blog  %}
+
+{{ blog({
+    title:"Test",
+    content:"markdown-test.md"
+})}}

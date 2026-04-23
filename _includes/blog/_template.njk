@@ -1,0 +1,9 @@
+{% set markdownPath = params.content %}
+<section class="flex flex-col w-full mt-4 markdown-blog">
+
+{% set blogContent = markdownPath %}
+{% markdown %}
+  {% include "../../_content/" + blogContent %}
+{% endmarkdown %}
+
+</section>
