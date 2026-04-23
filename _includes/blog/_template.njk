@@ -1,11 +1,10 @@
 {% set markdownPath = params.content %}
-<section class="flex flex-col w-full mt-8">
+<section class="flex flex-col w-full mt-8 markdown-blog">
     <h2 class="uppercase font-bold"> {{params.title}}</h2>
-   <p> {{markdownPath}} </p>
 
-   {# {% set snippet %}{% include '../../_content/markdown-test.md' %}{% endset %}
-{% markdown snippet %} #}
-   {# {% include '../../_content/markdown-test.md'  %} #}
-
+{% set blogContent = markdownPath %}
+{% markdown %}
+  {% include "../../_content/" + blogContent %}
+{% endmarkdown %}
 
 </section>

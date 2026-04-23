@@ -1,4 +1,4 @@
-# A title 
+# My article about something random
 
 Something here!
 
