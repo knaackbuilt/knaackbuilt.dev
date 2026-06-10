@@ -1,5 +1,7 @@
 # What does a MacBook Air M1 actually need to function
 
+Or how I learned where to gleefully hit it with a hammer.
+
 This seems straightforward. Obviously the MBA M1 needs all the things that any laptop actually needs to function. 
 
 You silly bastard. This laptop needs exactly fuck-all to function.
@@ -12,13 +14,13 @@ Is this a revelation to most people? Maybe not. I think your average user would 
 
 At this point you might be able to drop this thing out of a vehicle at highway speed and still have a totally awesome functioning computer. Citation needed, make sure it was fucked up before you do that and the case is closed.
 
-I think apple has made some of the most enjoyable and useful computers ever. Then they started making them with intel integrated chipsets and proceeded to make some of the shittest computers a lot of money could buy. I'd say from late 2009 until late 2020 they made exactly zero good computers. Dark times in apple land.
+I think apple has made some of the most enjoyable and useful computers ever. Then they started making them with intel integrated chipsets and proceeded to make some of the shittest computers a lot of money could buy. I'd say from late 2009 until late 2020 they made exactly zero good computers. Dark times in apple land. When they introduced the M1 silicon, they basically could have stopped making computers. It's perfect. 
 
-From my extensive experience rebuilding and tinkering with the PowerPC era of laptops (G3's and G4's in iBooks and PowerBooks) I can say that while these machines were often difficult to repair and replace parts on, they weren't impossible. There weren't too many single-use features of the inner case design, cabling, or critical parts except the usual useless padding and other covers and such. 
+From my extensive experience rebuilding and tinkering with the PowerPC era of laptops (G3's and G4's in iBooks and PowerBooks) I can say that while these machines were often difficult to repair and replace parts on, they weren't impossible. There weren't too many single-use features of the inner case design, cabling, or critical parts except the usual useless padding and other covers and such. And half the screws - you don't need all those.
 
 Modern laptops are scary. They have nothing to fix or replace. If it's broken, it's fucked. Doesn't matter what torx screwdrivers you have and time to spare. 
 
-Not to fret! The MacBook M1 Air doesn't fucking need any of it's goddamn parts anyways. Did you fuck up your screen by dropping it? Who cares! Your machine is actually faster now that it doesn't need that shit attached. Of no concern to the MBA M1 is the trivial nature of whether or not the laptop screen is connected. It doesn't give a shit. There are zero hardware level checks to see if the screen cable is connected. If you unplug that cable it says fuck you I believe it's still here. A phantom limb symptom. 
+Not to fret! The MacBook M1 Air doesn't fucking need any of it's goddamn parts anyways. Did you fuck up your screen by dropping it? Who cares! Your machine is actually faster now that it doesn't need that shit attached. Of no concern to the MBA M1 is the trivial nature of whether or not the laptop screen is connected. It doesn't give a shit. There are zero hardware level checks to see if the screen cable is connected. If you unplug that cable it says fuck you I believe it's still here. A phantom limb screen. 
 
 In the past you'd be able to replace or upgrade a harddrive, ram, expansion slots and add-ons, heat sinks and fans, sometimes things that break like dc-in boards if you were insane (citation for replacing a graphics card on a powerbook - crying emoji I have to do this on my powerbook g4 17). Some of these parts were even considered user serviceable. The ram was right there under the keyboard. Or the airport card was plug and play. Not anymore. All that shit is printed into a graham cracker and stapled to the case. There are no parts.
 
@@ -64,9 +66,11 @@ Then some other key person out there with too much time determined that there wa
 
 So I learned a lot. Now you can learn too. New used battery and everything is fine. So the machine will "work" without a battery, but it won't perform. I still maintain that this laptop I could hit with a hammer significantly more times than other laptops and still salvage a working machine in some fashion. If you spill water on it though, fuck off. It's dead. 
 
+Oh and I didn't address the missing wifi/bluetooth antenna. I was surprised when the machine was delivered and this was missing, but you do have to remove it to remove the screen so maybe it was forgotten or sold as parts. I thought that missing this antenna would mean that wifi would not work. Again, this macbook air doesn't fucking care if it has the required parts or not. The antenna is just that: an antenna. The core functionality of the wifi reciever is part of the logic board. We don't need a goddamn antenna if the laptop is literally sitting on top of the fucking router. Flawless. Move the router more than, say 3 millimeters away from the back of the case at exactly the right spot and you'll get a dropped packets and a shit connection, but as long as you keep that baby practically taped to the bottom of the macbook air you'll get exactly the same download speeds as with a damn antenna. Bluetooth seems to be the same although AirDrop didn't seem to work even when a similar "smash these devices together" strategy was employed. 
+
 If anyone is asking, no this process won't bypass activation lock or a managed profile lock on a machine you "found" in the dumpster. Those are both handled at the activation layer which requires an internet connection and is Apple managed. You can re-flash everything to oblivion and still be unable to activate the machine. 
 
-I now have a perfectly functional M1 that can run a top-tier OS flawlessly. 
+I now have a perfectly functional M1 that can run a top-tier OS smoothly.
 
 P.S. - Apple also fucked up on the intial roll out of the m1 series. This machine is so good they panic'd and made a bad profit/product call. There is zero difference between the air and the pro with the same configuration. No more cores, no fun extras. Just worse battery life and a bulkier case. The macbook pro m1 has a bigger battery but somehow gets worse life (anectodotally). 
 
