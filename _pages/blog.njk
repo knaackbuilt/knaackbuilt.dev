@@ -5,7 +5,14 @@ permalink: "useless-ramblings/"
 ---
  {% from '../_includes/_components.njk' import topic, randomizer, taglist, blog  %}
 
-{{ blog({
-    title:"Test",
-    content:"markdown-test.md"
+{{ topic({
+    title:"Ramblings",
+    topics:[
+        {
+            title:"How many times can you hit a MacBook M1 Air with a hammer?",
+            text:"...And reasonably expect it to function. ",
+            link: "/hit-a-macbook-with-a-hammer"
+        }
+    ]
+
 })}}

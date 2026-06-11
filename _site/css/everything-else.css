@@ -44,6 +44,13 @@ h1, h2, h3, h4, h5, h6 {
   font-style: italic;
 }
 
+.markdown-blog {
+  width: 90%;
+  max-width: 1000px;
+  display: flex;
+  margin: 0 auto
+}
+
 .markdown-blog li {
   list-style-type: disc;
   margin-inline-start: 2rem;
@@ -83,4 +90,15 @@ h1, h2, h3, h4, h5, h6 {
   border-block: 8px groove #777;
   margin-block: 2rem;
   display: flex;
+}
+
+.markdown-blog p {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  text-indent: 2rem;
+}
+
+.markdown-blog hr {
+  height: 3rem;
+    border-top-width: 9px;
 }
