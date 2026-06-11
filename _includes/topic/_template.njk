@@ -1,7 +1,8 @@
+{% if params.type == "yellow" %}
 <section class="flex flex-col w-full mt-8">
     <h2 class="uppercase font-bold"> {{params.title}}</h2>
     {% for topic in params.topics %}
-        <a href="{{topic.link}}" class=" bg-amber-300 hover:bg-violet-500 focus:bg-violet-500  hover:text-white focus:text-white my-4">
+        <a href="{{topic.link}}" class=" bg-amber-500 hover:bg-violet-500 focus:bg-violet-500  hover:text-white focus:text-white my-4">
             <div class="flex w-full  p-4 justify-between items-center">   
                 <h3 class="text-xl mr-4">{{topic.title}}</h3>
                 <p class="text-sm">{{topic.text}}</p>    
@@ -9,3 +10,16 @@
         </a>
     {% endfor %}
 </section>
+{% else %}
+<section class="flex flex-col w-full mt-8">
+    <h2 class="uppercase font-bold"> {{params.title}}</h2>
+    {% for topic in params.topics %}
+        <a href="{{topic.link}}" class=" bg-fuchsia-400 hover:bg-sky-900 focus:bg-sky-900 hover:text-rose-400 focus:text-rose-400 my-4">
+            <div class="flex w-full  p-4 justify-between items-center">   
+                <h3 class="text-xl mr-4">{{topic.title}}</h3>
+                <p class="text-sm">{{topic.text}}</p>    
+            </div>
+        </a>
+    {% endfor %}
+</section>
+{% endif %}
