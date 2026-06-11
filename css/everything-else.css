@@ -94,8 +94,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .markdown-blog p {
   margin-bottom: 15px;
-  font-size: 1.2rem;
-  text-indent: 2rem;
+  font-size: 1.3rem;
+  line-height: 2.2rem;
 }
 
 .markdown-blog hr {
